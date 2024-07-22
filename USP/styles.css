@@ -1,0 +1,102 @@
+body {
+    font-family: 'Avenir Next LT Pro', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #32373C;
+    background-color: white;
+    text-align: center; 
+}
+header {
+    background-color: #32373C;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+header nav a {
+    color: #FED16E;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+}
+.logo img {
+    height: 40px;
+}
+section {
+    padding: 60px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center; 
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Avenir Next LT Pro Light', sans-serif;
+    font-weight: bold;
+    color: #71835F;
+}
+h1 {
+    font-size: 24px;
+}
+p {
+    font-family: 'Avenir Next LT Pro Light', sans-serif;
+    font-size: 18px;
+    color: #32373C;
+    line-height: 1.6;
+}
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+.btn {
+    background-color: #C00000;
+    color: #FED16E;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 20px;
+}
+footer {
+    background-color: #32373C;
+    color: #FED16E;
+    text-align: center;
+    padding: 20px;
+}
+
+span {
+    color: #C00000;
+}
+
+li {
+    font-size: 18px;
+}
+
+
+.services {
+background-color: #c2fbd7;
+border-radius: 100px;
+box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
+color: #32373C;
+cursor: pointer;
+display: inline-block;
+font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+padding: 7px 20px;
+text-align: center;
+text-decoration: none;
+transition: all 250ms;
+border: 0;
+font-size: 16px;
+user-select: none;
+-webkit-user-select: none;
+touch-action: manipulation;
+}
+
+.services:hover {
+box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
+transform: scale(1.05) rotate(-1deg);
+}
+
+.presentation {
+width: 50%;
+box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}

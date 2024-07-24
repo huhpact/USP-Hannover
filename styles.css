@@ -19,6 +19,10 @@ header {
     align-items: center;
 }
 
+header nav {
+    display: flex;
+}
+
 header nav a {
     color: #FED16E;
     text-decoration: none;
@@ -236,7 +240,6 @@ hr {
     max-width: 800px;
     margin: 40px auto;
     display: block;
-    
     box-shadow: 0px 1px 0px 0px rgba(0,0,0,0.22), 1px 0px 0px 0px rgba(0,0,0,0.22), 1px 2px 0px 0px rgba(0,0,0,0.22), 2px 1px 0px 0px rgba(0,0,0,0.22), 2px 3px 0px 0px rgba(0,0,0,0.22), 3px 2px 0px 0px rgba(0,0,0,0.22), 3px 4px 0px 0px rgba(0,0,0,0.22), 4px 3px 0px 0px rgba(0,0,0,0.22), 4px 5px 0px 0px rgba(0,0,0,0.22), 5px 4px 0px 0px rgba(0,0,0,0.22), 5px 6px 0px 0px rgba(0,0,0,0.22), 6px 5px 0px 0px rgba(0,0,0,0.22), 6px 7px 0px 0px rgba(0,0,0,0.22), 7px 6px 0px 0px rgba(0,0,0,0.22), 7px 8px 0px 0px rgba(0,0,0,0.22), 8px 7px 0px 0px rgba(0,0,0,0.22);
 }
 
@@ -275,85 +278,87 @@ hr {
 }
 
 .contact-person img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
-    margin-bottom: 20px;
+    height: 120px;
+width: 120px;
+border-radius: 50%;
+object-fit: cover;
+margin: 0 auto;
+display: block;
+box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
 
-.contact-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
+
+.contact-person h3 {
     margin-top: 10px;
-}
-
-.contact-buttons a {
-    text-decoration: none;
-}
-
-.button-52 {
+    font-size: 22px;
+    }
+    
+    .contact-person p {
+    margin-top: 5px;
     font-size: 16px;
-    font-weight: 200;
-    letter-spacing: 1px;
-    padding: 13px 20px 13px;
-    outline: 0;
-    border: 1px solid black;
-    cursor: pointer;
-    position: relative;
-    background-color: rgba(0, 0, 0, 0);
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-}
+    }
+    
+    @media (max-width: 767px) {
+    header nav {
+    display: none;
+    }
 
-.button-52:after {
-    content: "";
-    background-color: #ffe54c;
-    width: 100%;
-    z-index: -1;
-    position: absolute;
-    height: 100%;
-    top: 7px;
-    left: 7px;
-    transition: 0.2s;
-}
+    header .menu-toggle {
+        display: block;
+        color: #FED16E;
+        font-size: 24px;
+        cursor: pointer;
+    }
+    
+    header nav.active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #333333;
+    }
+    
+    header nav a {
+        padding: 15px;
+        font-size: 20px;
+        border-bottom: 1px solid #FED16E;
+    }
+    
+    section {
+        padding: 40px 10px;
+    }
+    
+    .about-item,
+    .contact-person {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+    
+    h1 {
+        font-size: 24px;
+    }
+    
+    h2 {
+        font-size: 20px;
+    }
+    
+    p,
+    span {
+        font-size: 16px;
+        margin: 0 10%;
+    }
+    
+    ul {
+        font-size: 16px;
+        margin: 20px 10%;
+    }
 
-.button-52:hover:after {
-    top: 0px;
-    left: 0px;
 }
 
 @media (min-width: 768px) {
-    .button-52 {
-        padding: 13px 50px 13px;
-    }
-
-    .divider {
-        display: block;
-    }
+.button-52 {
+padding: 13px 50px 13px;
 }
-
-@media (max-width: 767px) {
-    .divider {
-        display: none;
-    }
-}
-
-.divider {
-    border-left: 2px solid #71835F;
-    height: 100px;
-    align-self: center;
-    margin: 0 20px;
-}
-
-.contact-general {
-    text-align: center;
-    font-size: 16px;
-}
-
-.contact-general p {
-    font-size: 14px;
-    margin: 10px 0;
 }

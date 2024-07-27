@@ -17,6 +17,171 @@
     <link rel="stylesheet" href="styles.css">
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/scrollreveal/4.0.9/scrollreveal.min.js"></script>
     <script defer src="script.js"></script>
+    <style>
+        body {
+            font-family: 'Avenir Next LT Pro', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #32373C;
+            background-color: #f9f9f9;
+            text-align: center;
+            scroll-behavior: smooth;
+            scroll-snap-type: y proximity;
+            overflow-y: scroll;
+        }
+
+        header {
+            background-color: #333333;
+            padding: 20px;
+            padding-top: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header nav {
+            display: flex;
+        }
+
+        header nav a {
+            color: #FED16E;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+            transition: color 0.3s, font-size 0.3s;
+        }
+
+        header nav a:hover {
+            color: white;
+            font-size: 20px;
+        }
+
+        .logo img {
+            height: 60px;
+            background-color: white;
+            border-radius: 4px;
+        }
+
+        main {
+            padding: 60px 20px;
+            margin: 0 auto;
+        }
+
+        section {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        section h1,
+        section h2 {
+            margin-bottom: 20px;
+        }
+
+        section p {
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .icon-row {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 40px 0;
+        }
+
+        .icon-row i {
+            font-size: 48px;
+            color: #71835F;
+        }
+
+        .btn-primary {
+    position: relative;
+    font-size: 16px;
+    font-weight: 200;
+    letter-spacing: 1px;
+    padding: 13px 20px;
+    outline: 0;
+    border: 1px solid black;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    transition: background-color 0.3s, color 0.3s;
+    display: inline-block;
+    margin-top: 20px;
+    color: black;
+    text-decoration: none;
+}
+
+
+.btn-primary:hover {
+    background-color: #FED16E;
+    color: black;
+}
+
+
+.btn-primary:after {
+    content: "";
+    background-color: transparent; 
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+    height: 100%;
+    top: 7px;
+    left: 7px;
+    transition: 0.2s;
+}
+
+
+.btn-primary:hover:after {
+    top: 0;
+    left: 0;
+}
+
+
+        footer {
+            background-color: #333333;
+            color: #FED16E;
+            text-align: center;
+            padding: 20px;
+            font-size: 12px;
+        }
+
+        footer a {
+            color: #FED16E;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 14px;
+            transition: color 0.3s, font-size 0.3s;
+        }
+
+        footer a:hover {
+            color: #fff;
+            font-size: 16px;
+        }
+
+        footer .icons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        footer .icons a {
+            margin: 0 15px;
+            font-size: 18px;
+            transition: font-size 0.3s;
+        }
+
+        footer .icons a:hover {
+            font-size: 20px;
+        }
+
+        .copy {
+            font-size: 14px;
+        }
+    </style>
 </head>
 
 <body>
@@ -24,31 +189,32 @@
         <div class="logo">
             <a href="index.html"><img src="/assets/logo.png" alt="USP Hannover Logo"></a>
         </div>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="index.html">Angebot</a>
-            <a href="index.html">Über uns</a>
-            <a href="index.html">Kontakt</a>
-        </nav>
     </header>
 
     <main>
         <section>
             <h1>Arbeit ist nicht alles!</h1>
-            <p>Wussten Sie schon, dass man als Unternehmer im Durchschnitt ca. 90.000 bis 100.00 Stunden im Unternehmen verbringt? Direkt hintereinander wären über 10 Jahre reine Arbeitszeit ohne Schlaf, Freizeit und Feierabend. Manche Unternehmer schaffen auch noch mehr. Die Arbeit nimmt aber nicht nur Zeit in Anspruch, sondern fordert den Menschen auch physisch und psychisch. Häufig macht sie uns auch krank. Daher ist es ganz logisch, sich zu überlegen, wie wir diese vielen Jahre sinnvoll nutzen können, um die notwendige Zufriedenheit in persönlicher als auch in finanzieller Hinsicht zu erreichen.</p>
+            <p>Wussten Sie schon, dass man als Unternehmer im Durchschnitt ca. 90.000 bis 100.000 Stunden im Unternehmen verbringt? Direkt hintereinander wären das über 10 Jahre reine Arbeitszeit ohne Schlaf, Freizeit und Feierabend. Manche Unternehmer schaffen auch noch mehr. Die Arbeit nimmt aber nicht nur Zeit in Anspruch, sondern fordert den Menschen auch physisch und psychisch. Häufig macht sie uns auch krank. Daher ist es ganz logisch, sich zu überlegen, wie wir diese vielen Jahre sinnvoll nutzen können, um die notwendige Zufriedenheit in persönlicher als auch in finanzieller Hinsicht zu erreichen.</p>
 
             <h2>Unser Ansatz</h2>
-            <p>Aufgrund unserer persönlichen Erfahrungen über 25 Jahre aus der Beratung, Begleitung und Unterstützung als Steuerberater und Partner in einem großen Beratungsunternehmen ist uns die Balance zwischen „Unternehmer sein“ und Privatleben im unternehmerischen Umfeld besonders wichtig geworden. Im Rahmen unserer Tätigkeiten haben wir dabei erkannt, dass der Erfolg eines Unternehmens nicht nur von Umsatz und Ertrag abhängig ist, sondern auch von der persönlichen Leistungsfähigkeit, der Energie und der Gesundheit des Unternehmers und dessen Verantwortung für sich selbst. Daher ist unser Ziel, Unternehmerinnen und Unternehmer auf dem Weg zu mehr Erfolg, mehr Einzigartigkeit und mehr persönlicher Zufriedenheit als Ihr Sparringspartner auf Ihrem Weg zu begleiten zu einem erfolgreichen und erfüllten (Unternehmer)leben zu begleiten. Dabei ist für uns die Kommunikation und der Kontakt auf Augenhöhe sowie die vertrauensvolle Arbeitsatmosphäre mit dem Kunden besonders wichtig und Grundlage unseres Auftrags.</p>
+            <p>Aufgrund unserer persönlichen Erfahrungen über 25 Jahre aus der Beratung, Begleitung und Unterstützung als Steuerberater und Partner in einem großen Beratungsunternehmen ist uns die Balance zwischen „Unternehmer sein“ und Privatleben im unternehmerischen Umfeld besonders wichtig geworden. Im Rahmen unserer Tätigkeiten haben wir dabei erkannt, dass der Erfolg eines Unternehmens nicht nur von Umsatz und Ertrag abhängig ist, sondern auch von der persönlichen Leistungsfähigkeit, der Energie und der Gesundheit des Unternehmers und dessen Verantwortung für sich selbst. Daher ist unser Ziel, Unternehmerinnen und Unternehmer auf dem Weg zu mehr Erfolg, mehr Einzigartigkeit und mehr persönlicher Zufriedenheit als Ihr Sparringspartner auf Ihrem Weg zu einem erfolgreichen und erfüllten (Unternehmer)leben zu begleiten. Dabei ist für uns die Kommunikation und der Kontakt auf Augenhöhe sowie die vertrauensvolle Arbeitsatmosphäre mit dem Kunden besonders wichtig und Grundlage unseres Auftrags.</p>
             <p>Als Ihr Sparringspartner und Ratgeber bringen wir Sie den entscheidenden Schritt voran – probieren Sie es aus und lassen Sie uns sprechen.</p>
+
+            <div class="icon-row">
+                <i class='bx bx-briefcase'></i>
+                <i class='bx bx-rocket'></i>
+                <i class='bx bx-heart'></i>
+            </div>
+
+            <a href="contact.html" class="btn-primary">Kontaktieren Sie uns</a>
         </section>
     </main>
 
     <footer>
-        <p class="copy">&copy; 2024 USP Hannover. Alle Rechte vorbehalten.</p>
+        <p class="copy">&copy; 2024 USP Hannover GmbH. Alle Rechte vorbehalten.</p>
         <div class="icons">
             <a href="impressum.html"><i class='bx bxs-file'></i> Impressum</a>
             <a href="privacy.html"><i class='bx bxs-lock-alt'></i> Datenschutzerklärung</a>
-            
         </div>
     </footer>
 </body>

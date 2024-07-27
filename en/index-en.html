@@ -23,6 +23,7 @@
             scroll-behavior: smooth;
             scroll-snap-type: y proximity;
             overflow-y: scroll;
+            overflow-x: hidden;
         }
 
         header {
@@ -381,7 +382,54 @@
         font-size: 16px;
     }
 }
+.fullscreen-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url('/assets/hannover.jpg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FED16E;
+    text-align: center;
+    overflow-x: hidden;
+}
 
+.fullscreen-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    background-color: #FED16E;
+}
+
+.fullscreen-section .typed-text {
+    font-size: 2rem;
+    font-weight: bold;
+    border-right: 2px solid white;
+    white-space: nowrap;
+    overflow: hidden;
+    -webkit-text-stroke: 1.5px black;
+}
+
+@media (max-width: 768px) {
+    .fullscreen-section {
+        height: 100vh;
+        background-size: cover;
+        padding: 20px;
+        overflow-x: hidden;
+    }
+
+    .fullscreen-section h1 {
+        font-size: 2rem;
+        margin-bottom: 10px;
+        padding: 10px;
+    }
+
+    .fullscreen-section .typed-text {
+        font-size: 1.5rem;
+        -webkit-text-stroke: 1px black;
+        padding: 10px;
+    }
+}
 
     </style>
 </head>
@@ -404,7 +452,12 @@
             <i class='bx bx-menu'></i>
         </div>
     </header>
-
+    <div class="fullscreen-section">
+        <div> 
+            <h1>Welcome to USP Hannover!</h1>
+            <div class="typed-text"></div>
+        </div>
+    </div> 
     <main>
         <section id="home">
             <h1>Does that sound familiar to you?</h1>
@@ -499,6 +552,40 @@
 
         document.querySelector('.nav-links').addEventListener('click', function (event) {
             event.stopPropagation();
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const texts = ["Your Partner for Entrepreneurial Success", "Your Solution for Annoying Bureaucracy", "Help with Skilled Labor Shortage", "Support for Digitalization"];
+            let index = 0;
+            let charIndex = 0;
+            const typingSpeed = 100;
+            const erasingSpeed = 50;
+            const newTextDelay = 2000; 
+            const typedTextElement = document.querySelector('.typed-text');
+
+            function type() {
+                if (charIndex < texts[index].length) {
+                    typedTextElement.textContent += texts[index].charAt(charIndex);
+                    charIndex++;
+                    setTimeout(type, typingSpeed);
+                } else {
+                    setTimeout(erase, newTextDelay);
+                }
+            }
+
+            function erase() {
+                if (charIndex > 0) {
+                    typedTextElement.textContent = texts[index].substring(0, charIndex - 1);
+                    charIndex--;
+                    setTimeout(erase, erasingSpeed);
+                } else {
+                    index++;
+                    if (index >= texts.length) index = 0;
+                    setTimeout(type, typingSpeed + 1100);
+                }
+            }
+
+            setTimeout(type, newTextDelay + 250);
         });
     </script>
 </body>

@@ -419,25 +419,34 @@
     z-index: -1;
     transition: width 0.1s linear; 
 }
-    @media (max-width: 768px) {
+@media (max-width: 768px) {
     .fullscreen-section {
         height: 100vh;
         background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         padding: 20px;
-        overflow-x: hidden;
+        overflow: hidden;
     }
 
     .fullscreen-section h1 {
-        font-size: 2rem;
+        font-size: 1.8rem;
         margin-bottom: 10px;
-        padding: 10px;
     }
 
-    .fullscreen-section {
-        font-size: 1.5rem;
-        padding: 10px;
+    .fullscreen-section .typed-text {
+        font-size: 1.2rem;
+        padding: 0 5px;
     }
-}   
+
+    .fullscreen-section .typed-text::before {
+        width: auto;
+    }
+}
+
+
 
 .typed-text {
             position: relative;

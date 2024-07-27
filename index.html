@@ -400,10 +400,9 @@
     background-color: #FED16E;
 }
 
-.fullscreen-section .typed-text {
+.fullscreen-section {
     font-size: 2rem;
     font-weight: bold;
-    border-right: 2px solid white;
     white-space: nowrap;
     overflow: hidden;
     -webkit-text-stroke: 1.5px black;
@@ -423,12 +422,37 @@
         padding: 10px;
     }
 
-    .fullscreen-section .typed-text {
+    .fullscreen-section {
         font-size: 1.5rem;
         -webkit-text-stroke: 1px black;
         padding: 10px;
     }
 }
+
+.typed-text {
+            position: relative;
+            display: inline-block;
+            padding: 0 10px;
+            background-color: #FED16E;
+            font-weight: bold;
+            color: black;
+            font-size: 24px;
+        }
+
+        .typed-text::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            background-color: black;
+            z-index: -1;
+            transition: width 0.3s ease;
+        }
+
+        .typed-text[data-progress='true']::before {
+            width: 100%;
+        }
     </style>
 </head>
 

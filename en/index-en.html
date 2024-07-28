@@ -432,13 +432,14 @@
     }
 
     .fullscreen-section h1 {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
         margin-bottom: 10px;
+        padding: 0 20px; 
     }
 
     .fullscreen-section .typed-text {
-        font-size: 1.2rem;
-        padding: 0 5px;
+        font-size: 1rem;
+        padding: 0 20px; 
     }
 
     .fullscreen-section .typed-text::before {
@@ -446,6 +447,34 @@
     }
 }
 
+
+@media (max-width: 1024px) {
+    .fullscreen-section {
+        height: 100vh;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        overflow: hidden;
+    }
+
+    .fullscreen-section h1 {
+        font-size: 2rem;
+        margin-bottom: 10px;
+        padding: 0 20px; 
+    }
+
+    .fullscreen-section .typed-text {
+        font-size: 1.5rem;
+        padding: 0 20px; 
+    }
+
+    .fullscreen-section .typed-text::before {
+        width: auto;
+    }
+}
 
 
 .typed-text {

@@ -416,18 +416,21 @@
         justify-content: center;
         align-items: center;
         padding: 20px;
+        text-align: center;
         overflow: hidden;
     }
 
     .fullscreen-section h1 {
-        font-size: 1.5rem;
+        font-size: 1.2rem; 
         margin-bottom: 10px;
-        padding: 0 20px; 
+        padding: 0 10px; 
+        word-wrap: break-word; 
     }
 
     .fullscreen-section .typed-text {
-        font-size: 1rem;
-        padding: 0 20px; 
+        font-size: 1rem; 
+        padding: 0 10px;
+        word-wrap: break-word; 
     }
 
     .fullscreen-section .typed-text::before {
@@ -435,8 +438,7 @@
     }
 }
 
-
-@media (max-width: 1024px) {
+@media (min-width: 769px) and (max-width: 1024px) {
     .fullscreen-section {
         height: 100vh;
         background-size: cover;
@@ -445,26 +447,27 @@
         justify-content: center;
         align-items: center;
         padding: 20px;
+        text-align: center;
         overflow: hidden;
     }
 
     .fullscreen-section h1 {
-        font-size: 2rem;
+        font-size: 1.8rem; 
         margin-bottom: 10px;
         padding: 0 20px; 
+        word-wrap: break-word; 
     }
 
     .fullscreen-section .typed-text {
-        font-size: 1.5rem;
+        font-size: 1.2rem; 
         padding: 0 20px; 
+        word-wrap: break-word; 
     }
 
     .fullscreen-section .typed-text::before {
         width: auto;
     }
 }
-
-
 
 .typed-text {
             position: relative;
@@ -512,7 +515,7 @@
         </div>
     </header> 
     <div class="fullscreen-section">
-        <div> 
+        <div class="content-wrapper"> 
             <h1>Willkommen bei USP Hannover!</h1>
             <div class="typed-text"></div>
         </div>

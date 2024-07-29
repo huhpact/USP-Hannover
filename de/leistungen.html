@@ -4,131 +4,391 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>USP Hannover - Leistungen</title>
-    <meta name="description" content="Kontaktieren Sie USP Hannover für Unterstützung bei Bürokratie, Fachkräftemangel, Digitalisierung und mehr.">
-    <meta name="keywords" content="USP Hannover, Kontakt, Unternehmensberatung, Bürokratie, Fachkräftemangel, Digitalisierung">
+    <title>USP Hannover - Unsere Leistungen</title>
+    <meta name="description" content="Entdecken Sie die vielfältigen Leistungen von USP Hannover. Wir unterstützen mittelständische Unternehmen in Bereichen wie Bürokratieabbau, Fachkräftemangel, Digitalisierung und mehr.">
+    <meta name="keywords" content="USP Hannover, Leistungen, Unternehmensberatung, Bürokratie, Fachkräftemangel, Digitalisierung">
     <meta name="author" content="USP Hannover">
     <meta name="robots" content="index, follow">
-    <link href='https://fonts.googleapis.com/css?family=Avenir Next LT Pro' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Avenir+Next+LT+Pro' rel='stylesheet'>
     <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
     <link rel="icon" href="/assets/logo.png" type="image/x-icon">
-    <link rel="stylesheet" href="/styles.css">
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/scrollreveal/4.0.9/scrollreveal.min.js"></script>
-    <script defer src="script.js"></script>
     <style>
-        html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-}
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 
-body {
-    display: flex;
-    flex-direction: column;
-    font-family: 'Avenir Next LT Pro', sans-serif;
-}
+        :root {
+            --headcolor: #71835f;
+        }
 
-.wrapper {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
+        body {
+            font-family: 'Avenir Next LT Pro', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #32373C;
+            background-color: #fff;
+            text-align: center;
+            overflow-y: scroll;
+            overflow-x: hidden;
+        }
 
-main {
-    flex: 1;
-}
+        header {
+            background-color: #333333;
+            padding: 20px;
+            padding-top: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-footer {
-    background-color: #333333;
-    color: #FED16E;
-    text-align: center;
-    padding: 20px;
-    font-size: 12px;
-    margin-top: auto;
-}
+        header nav {
+            display: flex;
+        }
 
-footer a {
-    color: #FED16E;
-    text-decoration: none;
-    margin: 0 15px;
-    font-size: 14px;
-    transition: color 0.3s, font-size 0.3s;
-}
+        header nav a {
+            color: #FED16E;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+            transition: color 0.3s, font-size 0.3s;
+        }
 
-footer a:hover {
-    color: #fff;
-    font-size: 16px;
-}
+        header nav a:hover {
+            color: white;
+            font-size: 20px;
+        }
 
-footer .icons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-}
+        .logo img {
+            height: 100px;
+            background-color: white;
+            border-radius: 4px;
+        }
 
-footer .icons a {
-    margin: 0 15px;
-    font-size: 18px;
-    transition: font-size 0.3s;
-}
+        section {
+            position: relative;
+            padding: 80px 20px;
+            margin: 0 auto;
+            color: black;
+            text-align: center;
+            scroll-snap-align: start;
+            background-color: #fff;
+        }
 
-footer .icons a:hover {
-    font-size: 20px;
-}
+        section h1,
+        section h2 {
+            margin-bottom: 20px;
+        }
 
-.copy {
-    font-size: 14px;
-}
+        section p {
+            margin-bottom: 20px;
+        }
 
-@media (max-width: 768px) {
-    h1 {
-        font-size: 22px;
-    }
+        h1,
+        h2,
+        h3 {
+            color: black;
+            font-weight: bold;
+            text-align: center;
+        }
 
-    h2 {
-        font-size: 18px;
-    }
+        h1 {
+            font-size: 28px;
+            margin-bottom: 30px;
+        }
 
-    h3 {
-        font-size: 16px;
-    }
+        h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
 
-    p, span, ul {
-        font-size: 16px;
-    }
+        .services {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
 
-    .button-52 {
-        font-size: 14px;
-        padding: 10px 20px;
-    }
+        .service-box {
+            border: 2px solid #FED16E;
+            border-radius: 10px;
+            padding: 20px;
+            width: 300px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
 
-    .nav-links a {
-        font-size: 16px;
-    }
-}
+        .service-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
 
+        .service-box i {
+            font-size: 48px;
+            color: #71835f;
+            margin-bottom: 15px;
+        }
+
+        .service-box h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .service-box p {
+            font-size: 16px;
+        }
+
+        .banner-container {
+            position: relative;
+            overflow: hidden;
+            height: 300px;
+            margin-bottom: 60px;
+            margin-top: 40px;
+        }
+
+        .banner {
+            display: flex;
+            width: 200%;
+            animation: bannerMove 20s linear infinite;
+        }
+
+        .banner img {
+            height: 300px;
+            object-fit: cover;
+            width: 25%;
+        }
+
+        @keyframes bannerMove {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .button-52 {
+            font-size: 16px;
+            font-weight: 200;
+            letter-spacing: 1px;
+            padding: 13px 20px 13px;
+            outline: 0;
+            border: 1px solid var(--headcolor);
+            cursor: pointer;
+            position: relative;
+            background-color: rgba(0, 0, 0, 0);
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            transition: background-color 0.3s, color 0.3s;
+            display: inline-block;
+            margin-top: 50px;
+            margin-bottom: 40px;
+            color: var(--headcolor);
+            text-decoration: none;
+        }
+
+        .button-52:after {
+            content: "";
+            background-color: #FED16E;
+            width: 100%;
+            z-index: -1;
+            position: absolute;
+            height: 100%;
+            top: 7px;
+            left: 7px;
+            transition: 0.2s;
+        }
+
+        .button-52:hover {
+            background-color: #FED16E;
+            color: black;
+        }
+
+        .button-52:hover:after {
+            top: 0px;
+            left: 0px;
+        }
+
+        @media (min-width: 768px) {
+            .button-52 {
+                padding: 13px 50px 13px;
+            }
+        }
+
+        .presentation {
+            height: 250px;
+            width: 250px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 20px auto;
+            display: block;
+            box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+        }
+
+        footer {
+            background-color: #333333;
+            color: #FED16E;
+            text-align: center;
+            padding: 20px;
+            font-size: 12px;
+        }
+
+        footer .icons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        footer .icons a {
+            color: #FED16E;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 16px;
+            transition: color 0.3s, font-size 0.3s;
+        }
+
+        footer .icons a:hover {
+            color: #fff;
+            font-size: 16px;
+        }
+
+        hr {
+            border: 1px solid black;
+            width: 80%;
+            margin: 60px auto;
+        }
+
+        .copy {
+            color: white;
+            font-size: 14px;
+        }
+
+        .section-image {
+            width: 60%;
+            max-width: 800px;
+            margin: 40px auto;
+            display: block;
+            box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.22), 1px 0px 0px 0px rgba(0, 0, 0, 0.22), 1px 2px 0px 0px rgba(0, 0, 0, 0.22), 2px 1px 0px 0px rgba(0, 0, 0, 0.22), 2px 3px 0px 0px rgba(0, 0, 0, 0.22), 3px 2px 0px 0px rgba(0, 0, 0, 0.22), 3px 4px 0px 0px rgba(0, 0, 0, 0.22), 4px 3px 0px 0px rgba(0, 0, 0, 0.22), 4px 5px 0px 0px rgba(0, 0, 0, 0.22), 5px 4px 0px 0px rgba(0, 0, 0, 0.22), 5px 6px 0px 0px rgba(0, 0, 0, 0.22), 6px 5px 0px 0px rgba(0, 0, 0, 0.22), 6px 7px 0px 0px rgba(0, 0, 0, 0.22), 7px 6px 0px 0px rgba(0, 0, 0, 0.22), 7px 8px 0px 0px rgba(0, 0, 0, 0.22), 8px 7px 0px 0px rgba(0, 0, 0, 0.22);
+        }
+
+        .credit {
+            font-family: "Roboto Mono", monospace;
+            font-size: 13px;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .credit a {
+            display: flex;
+            align-items: center;
+        }
+
+        .img-credit {
+            height: 20px;
+            margin-left: 5px;
+        }
     </style>
 </head>
 
 <body>
     <header>
         <div class="logo">
-            <a href="/index.html"><img src="/assets/logo.png" alt="USP Hannover Logo"></a>
+            <a href="/index.html"><img src="/assets/logo.png" alt="Logo"></a>
         </div>
-       
     </header>
 
-    <main>
-        
-    </main>
+    <section>
+        <h1>Unsere Leistungen im Überblick</h1>
+
+        <div class="services">
+            <div class="service-box">
+                <i class='bx bxs-rocket'></i>
+                <h3>Einzigartige Marktposition</h3>
+                <p>Unterstützung bei der Entwicklung einer einzigartigen Marktposition</p>
+            </div>
+            <div class="service-box">
+                <i class='bx bxs-analyse' style='color: var(--headcolor)' ></i>
+                <h3>Analysen</h3>
+                <p>Durchführung von Analysen in den Unternehmensbereichen Mitarbeiter und Personal, Prozesse und Organisation, Kunde und Verkauf, Finanzen sowie Strategische Ausrichtung</p>
+            </div>
+            <div class="service-box">
+                <i class='bx bx-refresh' style='color: var(--headcolor)' ></i>
+                <h3>Umstrukturierung</h3>
+                <p>Begleitung von Umstrukturierungs- und Nachfolgeprozessen</p>
+            </div>
+            <div class="service-box">
+                <i class='bx bxs-chart'></i>
+                <h3>Kennzahlensysteme</h3>
+                <p>Aufbau von zukunftsorientierten Kennzahlensystemen</p>
+            </div>
+            <div class="service-box">
+                <i class='bx bx-target-lock' style='color: var(--headcolor)' ></i>
+                <h3>Handlungsfelder</h3>
+                <p>Identifikation von Handlungsfeldern und -bedarfen</p>
+            </div>
+            <div class="service-box">
+                <i class='bx bxs-flag-checkered'></i>
+                <h3>Ziele</h3>
+                <p>Definition von erreichbaren Zielen zur langfristigen positiven Unternehmensentwicklung</p>
+            </div>
+            <div class="service-box">
+                <i class='bx bxs-check-shield'></i>
+                <h3>Maßnahmenumsetzung</h3>
+                <p>Umsetzungsunterstützung der definierten Maßnahmen zur Zielerreichung</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <h2>Für Ihre persönliche Performance und Leistungsfähigkeit</h2>
+
+        <div class="services">
+            <div class="service-box">
+                <i class='bx bxs-heart-circle'></i>
+                <h3>Lebensstileinflussfaktoren</h3>
+                <p>Analyse der Lebensstileinflussfaktoren, Ernährung, Stress, Bewegung und Sport, Familie und Beziehungen</p>
+            </div>
+            <div class="service-box">
+                <i class='bx bxs-bar-chart-alt-2'></i>
+                <h3>Gesundheitsparameter</h3>
+                <p>Interpretation der Gesundheitsparameter</p>
+            </div>
+            <div class="service-box">
+                <i class='bx bxs-flask'></i>
+                <h3>Gesundheitstests</h3>
+                <p>Durchführung und Begleitung von Tests zur ganzheitlichen Gesundheit</p>
+            </div>
+            <div class="service-box">
+                <i class='bx bx-target-lock' style='color: var(--headcolor)' ></i>
+                <h3>Handlungsfelder</h3>
+                <p>Identifikation von Handlungsfeldern und -bedarfen</p>
+            </div>
+            <div class="service-box">
+                <i class='bx bxs-flag-checkered'></i>
+                <h3>Persönliche Ziele</h3>
+                <p>Definition von persönlich erreichbaren Zielen</p>
+            </div>
+            <div class="service-box">
+                <i class='bx bxs-check-shield'></i>
+                <h3>Maßnahmenumsetzung</h3>
+                <p>Umsetzungsunterstützung der definierten Maßnahmen zur Zielerreichung</p>
+            </div>
+        </div>
+
+        <a href="contact.html" class="button-52">Kontaktieren Sie uns für mehr Informationen</a>
+    </section>
 
     <footer>
         <p class="copy">&copy; 2024 USP Hannover. Alle Rechte vorbehalten.</p>
         <div class="icons">
-            <a href="impressum.html"><i class='bx bxs-file'></i> Impressum</a>
-            <a href="privacy.html"><i class='bx bxs-lock-alt'></i> Datenschutzerklärung</a>
-        </div>
+            <a href="/de/impressum.html"><i class='bx bxs-file'></i> Impressum</a>
+            <a href="/de/privacy.html"><i class='bx bxs-lock-alt'></i> Datenschutzerklärung</a>
+        </div><br>
+        <p class="credit">Réalisé par 
+            <a href="https://huhpact.dev">
+                <img class="img-credit"  src="/assets/logo-huhpact.png" alt="huh(pact)"></a></p>
     </footer>
 </body>
 

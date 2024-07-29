@@ -13,13 +13,17 @@
     <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
     <link rel="icon" href="/assets/logo.png" type="image/x-icon">
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+        :root {
+            --headcolor: #71835f;
+        }
         body {
             font-family: 'Avenir Next LT Pro', sans-serif;
             margin: 0;
             padding: 0;
             color: #32373C;
-            background-color: #f9f9f9;
-            text-align: center;
+            background-color: #fff;
+            text-align: left;
             overflow-y: scroll;
             overflow-x: hidden;
         }
@@ -51,7 +55,7 @@
         }
 
         .logo img {
-            height: 60px;
+            height: 100px;
             background-color: white;
             border-radius: 4px;
         }
@@ -62,8 +66,7 @@
             margin: 0 auto;
             color: black;
             text-align: center;
-            scroll-snap-align: start;
-            background-color: #f9f9f9;
+            background-color: #fff;
         }
 
         section h1,
@@ -73,6 +76,10 @@
 
         section p {
             margin-bottom: 20px;
+        }
+
+        section p, span {
+            text-align: left;
         }
 
         .banner-container {
@@ -148,7 +155,7 @@
             letter-spacing: 1px;
             padding: 13px 20px 13px;
             outline: 0;
-            border: 1px solid black;
+            border: 1px solid var(--headcolor);
             cursor: pointer;
             position: relative;
             background-color: rgba(0, 0, 0, 0);
@@ -159,7 +166,7 @@
             display: inline-block;
             margin-top: 50px;
             margin-bottom: 40px;
-            color: black;
+            color: var(--headcolor);
             text-decoration: none;
         }
 
@@ -209,18 +216,6 @@
             font-size: 12px;
         }
 
-        footer a {
-            color: #FED16E;
-            text-decoration: none;
-            margin: 0 15px;
-            font-size: 14px;
-            transition: color 0.3s, font-size 0.3s;
-        }
-
-        footer a:hover {
-            color: #fff;
-            font-size: 16px;
-        }
 
         footer .icons {
             display: flex;
@@ -230,17 +225,21 @@
         }
 
         footer .icons a {
+            color: #FED16E;
+            text-decoration: none;
             margin: 0 15px;
-            font-size: 18px;
-            transition: font-size 0.3s;
+            font-size: 16px;
+            transition: color 0.3s, font-size 0.3s;
         }
 
         footer .icons a:hover {
-            font-size: 20px;
+            color: #fff;
+            font-size: 16px;
         }
 
+
         hr {
-            border: 1px solid #71835F;
+            border: 1px solid black;
             width: 80%;
             margin: 60px auto;
         }
@@ -301,6 +300,7 @@
                 transform: translateX(100%);
             }
 
+
             .nav-links a {
                 color: #FED16E;
                 padding: 15px;
@@ -320,6 +320,15 @@
             .language-selector {
                 margin-top: 10px;
                 margin-left: 15px;
+            }
+
+            .dropdown {
+                padding: 15px;
+                text-align: left;
+            }
+
+            .dropdown-content a:hover {
+                font-size: 16px;
             }
         }
 
@@ -381,6 +390,11 @@
     }
 }
 
+@media (max-width: 768px) {
+    .logo img {
+        height: 60px;
+    }
+}
 .fullscreen-section {
     position: relative;
     width: 100%;
@@ -496,6 +510,68 @@
         .typed-text[data-progress='true']::before {
             width: 100%;
         }
+
+        section h1, h2 {
+            color: var(--headcolor);
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #333333;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: #FED16E;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #444;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+            font-size: 20px;
+        }
+
+        .credit {
+            font-family: "Roboto Mono", monospace;
+            font-size: 13px;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .credit a {
+            display: flex;
+            align-items: center;
+        }
+
+        .img-credit {
+            height: 20px;
+            margin-left: 5px;
+        }
+
+        #home p { 
+            text-align: center;
+        }
+
     </style>
 </head>
 
@@ -509,6 +585,14 @@
             <a href="#angebot">Angebot</a>
             <a href="#ueber-uns">Über uns</a>
             <a href="#kontakt">Kontakt</a>
+            <div class="dropdown">
+                <a href="#">Mehr <i class='bx bxs-chevron-down'></i></a>
+                <div class="dropdown-content">
+                    <a href="#">Weitere Seite 1</a>
+                    <a href="#">Weitere Seite 2</a>
+                    <a href="#">Weitere Seite 3</a>
+                </div>
+            </div>
             <div class="language-selector" onclick="location.href='/en/index-en.html';">
                 <img src="/assets/Flag_of_Germany.svg" alt="DE">
             </div>
@@ -517,12 +601,8 @@
             <i class='bx bx-menu'></i>
         </div>
     </header> 
-    <div class="fullscreen-section">
-        <div class="content-wrapper"> 
-            <h1>Willkommen bei USP Hannover!</h1>
-            <div class="typed-text"></div>
-        </div>
-    </div> 
+    <!--FULLSCREEN HANNOVER PICTURE-->
+    <!--<div class="fullscreen-section"><div class="content-wrapper"> <h1>Willkommen bei USP Hannover!</h1><div class="typed-text"></div></div></div>--> 
     <main>
        
             <section id="home" class="snap-item">
@@ -563,12 +643,12 @@
             <div class="about-container">
                 <div class="about-item">
                     <img class="presentation" src="/assets/carstenklingebiel.png" alt="Carsten Klingebiel">
-                    <h2>Carsten Klingebiel</h2>
+                    <h2 style="color: black;">Carsten Klingebiel</h2>
                     <h3>Geschäftsführender Partner</h3>
                 </div>
                 <div class="about-item">
                     <img class="presentation" src="/assets/juliachappuzeau.png" alt="Julia Chappuzeau">
-                    <h2>Julia Chappuzeau</h2>
+                    <h2 style="color: black;">Julia Chappuzeau</h2>
                     <h3>Geschäftsführende Partnerin</h3>
                 </div>
             </div>
@@ -595,7 +675,10 @@
         <div class="icons">
             <a href="/de/impressum.html"><i class='bx bxs-file'></i> Impressum</a>
             <a href="/de/privacy.html"><i class='bx bxs-lock-alt'></i> Datenschutzerklärung</a>
-        </div>
+        </div><br>
+        <p class="credit">Réalisé par 
+            <a href="https://huhpact.dev">
+                <img class="img-credit"  src="/assets/logo-huhpact.png" alt="huh(pact)"></a></p>
     </footer>
 
     <script>

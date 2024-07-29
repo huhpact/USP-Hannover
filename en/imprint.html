@@ -10,6 +10,10 @@
     <link rel="icon" href="/assets/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="/styles.css">
     <style>
+         @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+        :root {
+            --headcolor: #71835f;
+        }
         body {
             font-family: 'Avenir Next LT Pro', sans-serif;
             margin: 0;
@@ -90,19 +94,6 @@
             font-size: 12px;
         }
 
-        footer a {
-            color: #FED16E;
-            text-decoration: none;
-            margin: 0 15px;
-            font-size: 14px;
-            transition: color 0.3s, font-size 0.3s;
-        }
-
-        footer a:hover {
-            color: #fff;
-            font-size: 16px;
-        }
-
         footer .icons {
             display: flex;
             justify-content: center;
@@ -111,13 +102,16 @@
         }
 
         footer .icons a {
+            color: #FED16E;
+            text-decoration: none;
             margin: 0 15px;
-            font-size: 18px;
-            transition: font-size 0.3s;
+            font-size: 16px;
+            transition: color 0.3s, font-size 0.3s;
         }
 
         footer .icons a:hover {
-            font-size: 20px;
+            color: #fff;
+            font-size: 16px;
         }
 
         .copy {
@@ -150,6 +144,36 @@
         font-size: 16px;
     }
 }
+.logo img {
+            height: 100px;
+            background-color: white;
+            border-radius: 4px;
+        }
+
+        @media (max-width: 768px) {
+    .logo img {
+        height: 60px;
+    }
+}
+
+.credit {
+            font-family: "Roboto Mono", monospace;
+            font-size: 13px;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .credit a {
+            display: flex;
+            align-items: center;
+        }
+
+        .img-credit {
+            height: 20px;
+            margin-left: 5px;
+        }
 
     </style>
 </head>
@@ -174,11 +198,14 @@
     </section>
 
     <footer>
-        <p class="copy">&copy; 2024 USP Hannover GmbH. All rights reserved.</p>
+        <p class="copy">&copy; 2024 USP Hannover. All rights reserved.</p>
         <div class="icons">
             <a href="imprint.html"><i class='bx bxs-file'></i> Imprint</a>
-            <a href="privacy-en.html"><i class='bx bxs-lock-alt'></i> Privacy policy</a>
-        </div>
+            <a href="privacy-en.html"><i class='bx bxs-lock-alt'></i> Privacy Policy</a>
+        </div><br>
+        <p class="credit">Réalisé par 
+            <a href="https://huhpact.dev">
+                <img class="img-credit"  src="/assets/logo-huhpact.png" alt="huh(pact)"></a></p>
     </footer>
 </body>
 

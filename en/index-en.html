@@ -215,18 +215,6 @@
             font-size: 12px;
         }
 
-        footer a {
-            color: #FED16E;
-            text-decoration: none;
-            margin: 0 15px;
-            font-size: 14px;
-            transition: color 0.3s, font-size 0.3s;
-        }
-
-        footer a:hover {
-            color: #fff;
-            font-size: 16px;
-        }
 
         footer .icons {
             display: flex;
@@ -236,13 +224,16 @@
         }
 
         footer .icons a {
+            color: #FED16E;
+            text-decoration: none;
             margin: 0 15px;
-            font-size: 18px;
-            transition: font-size 0.3s;
+            font-size: 16px;
+            transition: color 0.3s, font-size 0.3s;
         }
 
         footer .icons a:hover {
-            font-size: 20px;
+            color: #fff;
+            font-size: 16px;
         }
 
         hr {
@@ -561,6 +552,38 @@
             font-size: 20px;
         }
 
+        .logo img {
+            height: 100px;
+            background-color: white;
+            border-radius: 4px;
+        }
+
+        @media (max-width: 768px) {
+    .logo img {
+        height: 60px;
+    }
+}
+
+.credit {
+            font-family: "Roboto Mono", monospace;
+            font-size: 13px;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .credit a {
+            display: flex;
+            align-items: center;
+        }
+
+        .img-credit {
+            height: 20px;
+            margin-left: 5px;
+        }
+
+
     </style>
 </head>
 
@@ -662,8 +685,11 @@
         <p class="copy">&copy; 2024 USP Hannover. All rights reserved.</p>
         <div class="icons">
             <a href="imprint.html"><i class='bx bxs-file'></i> Imprint</a>
-            <a href="privacy-en.html"><i class='bx bxs-lock-alt'></i> Privacy policy</a>
-        </div>
+            <a href="privacy-en.html"><i class='bx bxs-lock-alt'></i> Privacy Policy</a>
+        </div><br>
+        <p class="credit">Réalisé par 
+            <a href="https://huhpact.dev">
+                <img class="img-credit"  src="/assets/logo-huhpact.png" alt="huh(pact)"></a></p>
     </footer>
 
     <script>

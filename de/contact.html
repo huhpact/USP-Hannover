@@ -16,6 +16,10 @@
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/scrollreveal/4.0.9/scrollreveal.min.js"></script>
     <script defer src="script.js"></script>
     <style>
+         @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+        :root {
+            --headcolor: #71835f;
+        }
         @media (max-width: 768px) {
     h1 {
         font-size: 22px;
@@ -42,7 +46,63 @@
         font-size: 16px;
     }
 }
+.credit {
+            font-family: "Roboto Mono", monospace;
+            font-size: 13px;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
+        .credit a {
+            display: flex;
+            align-items: center;
+        }
+
+        .img-credit {
+            height: 20px;
+            margin-left: 5px;
+        }
+
+        .logo img {
+            height: 100px;
+        }
+
+        @media (max-width: 768px) {
+    .logo img {
+        height: 60px;
+    }
+}
+
+footer {
+            background-color: #333333;
+            color: #FED16E;
+            text-align: center;
+            padding: 20px;
+            font-size: 12px;
+        }
+
+
+        footer .icons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        footer .icons a {
+            color: #FED16E;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 16px;
+            transition: color 0.3s, font-size 0.3s;
+        }
+
+        footer .icons a:hover {
+            color: #fff;
+            font-size: 16px;
+        }
     </style>
 </head>
 
@@ -56,7 +116,7 @@
 
     <main>
         <section id="kontakt">
-            <h1>Kontaktieren Sie uns</h1>
+            <h1 style="color: var(--headcolor)">Kontaktieren Sie uns</h1>
             <p>Wir freuen uns darauf, von Ihnen zu hören! Nutzen Sie die unten angegebenen Kontaktinformationen, um uns zu erreichen.</p>
 
             <div class="contact-info">
@@ -80,10 +140,10 @@
             </div>
 
             <div class="contact-general">
-                <h2>Allgemeine Kontaktinformationen</h2>
-                <p><i class='bx bxs-map'>&nbsp;</i><strong>Geschäftsadresse:</strong> Gretchenstraße 40, 30161 Hannover</p>
-                <p><i class='bx bxs-phone'>&nbsp;</i><strong>Allgemeine Nummer:</strong> +49 511 123456</p>
-                <p><i class='bx bxs-envelope'>&nbsp;</i><strong>Allgemeine E-Mail:</strong> <a href="mailto:info@usp-hannover.de">info@usp-hannover.de</a></p>
+                <h2 style="color: var(--headcolor)">Allgemeine Kontaktinformationen</h2>
+                <p><i class='bx bxs-map' style="color: var(--headcolor)">&nbsp;</i><strong>Geschäftsadresse:</strong> Gretchenstraße 40, 30161 Hannover</p>
+                <p><i class='bx bxs-phone' style="color: var(--headcolor)">&nbsp;</i><strong>Allgemeine Nummer:</strong> +49 511 123456</p>
+                <p><i class='bx bxs-envelope' style="color: var(--headcolor)">&nbsp;</i><strong>Allgemeine E-Mail:</strong> <a href="mailto:info@usp-hannover.de">info@usp-hannover.de</a></p>
             </div>
         </section>
     </main>
@@ -91,10 +151,12 @@
     <footer>
         <p class="copy">&copy; 2024 USP Hannover. Alle Rechte vorbehalten.</p>
         <div class="icons">
-            <a href="impressum.html"><i class='bx bxs-file'></i> Impressum</a>
-            <a href="privacy.html"><i class='bx bxs-lock-alt'></i> Datenschutzerklärung</a>
-            
-        </div>
+            <a href="/de/impressum.html"><i class='bx bxs-file'></i> Impressum</a>
+            <a href="/de/privacy.html"><i class='bx bxs-lock-alt'></i> Datenschutzerklärung</a>
+        </div><br>
+        <p class="credit">Réalisé par 
+            <a href="https://huhpact.dev">
+                <img class="img-credit"  src="/assets/logo-huhpact.png" alt="huh(pact)"></a></p>
     </footer>
 </body>
 

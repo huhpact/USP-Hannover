@@ -23,7 +23,7 @@
             margin: 0;
             padding: 0;
         }
-        
+
         body {
             font-family: 'Avenir Next LT Pro', sans-serif;
             margin: 0;
@@ -496,6 +496,10 @@
     }
 }
 
+#home p { 
+            text-align: center;
+        }
+
 .typed-text {
             position: relative;
             display: inline-block;
@@ -763,6 +767,15 @@
     setTimeout(type, newTextDelay + 250);
 });
 
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
 
 
     </script>

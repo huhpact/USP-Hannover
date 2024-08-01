@@ -308,6 +308,10 @@
     <section>
         <h1>Our Services at a Glance</h1>
 
+        <hr>
+
+        <h2>For Your Company</h2>
+
         <div class="services">
             <div class="service-box">
                 <i class='bx bxs-rocket'></i>
@@ -396,6 +400,18 @@
             <a href="https://huhpact.dev">
                 <img class="img-credit"  src="/assets/logo-huhpact.png" alt="huh(pact)"></a></p>
     </footer>
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
+    </script>
 </body>
 
 </html>

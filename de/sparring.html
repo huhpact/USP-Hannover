@@ -1,20 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>USP Hannover - Work Isn't Everything!</title>
-    <meta name="description" content="USP Hannover supports medium-sized businesses with bureaucracy, skills shortages, digitalization, and more. Discover our tailored solutions.">
-    <meta name="keywords" content="USP Hannover, SME, business consulting, bureaucracy, skills shortage, digitalization">
-    <meta name="author" content="USP Hannover">
-    <meta name="robots" content="index, follow">
-    <link href="https://fonts.googleapis.com/css?family=Avenir+Next+LT+Pro" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.0.9/css/boxicons.min.css" rel="stylesheet">
-    <link rel="icon" href="/assets/logo.png" type="image/x-icon">
-    <link rel="stylesheet" href="/styles.css">
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/scrollreveal/4.0.9/scrollreveal.min.js"></script>
-    <script defer src="script.js"></script>
+    <title>USP Hannover - Sparring</title>
+    <link href='https://fonts.googleapis.com/css?family=Avenir Next LT Pro|Roboto+Mono&display=swap' rel='stylesheet'>
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="shortcut icon" href="/assets/logo.png" type="image/x-icon">
     <style>
         :root {
             --headcolor: #71835f;
@@ -22,6 +14,8 @@
             --background-color: #f9f9f9;
             --text-color: #32373C;
             --header-background: #333333;
+            --highlight-background: #F3F4F6;
+            --accent-color: #FED16E;
         }
 
         body {
@@ -36,7 +30,7 @@
         }
 
         header {
-            background-color: #333333;
+            background-color: var(--header-background);
             padding: 20px;
             padding-top: 40px;
             display: flex;
@@ -71,10 +65,15 @@
             padding: 60px 20px;
             max-width: 1200px;
             margin: 0 auto;
+            animation: fadeIn 1s ease-in-out;
         }
 
-        section h1,
-        section h2 {
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        section h1, section h2 {
             margin-bottom: 20px;
             color: var(--headcolor);
             text-align: center;
@@ -98,6 +97,12 @@
         .icon-row i {
             font-size: 48px;
             color: var(--headcolor);
+            transition: transform 0.3s, color 0.3s;
+        }
+
+        .icon-row i:hover {
+            transform: scale(1.2);
+            color: var(--primary-color);
         }
 
         .btn-primary {
@@ -145,13 +150,12 @@
         }
 
         footer {
-            background-color: #333333;
-            color: #FED16E;
+            background-color: var(--header-background);
+            color: var(--primary-color);
             text-align: center;
             padding: 20px;
             font-size: 12px;
         }
-
 
         footer .icons {
             display: flex;
@@ -161,7 +165,7 @@
         }
 
         footer .icons a {
-            color: #FED16E;
+            color: var(--primary-color);
             text-decoration: none;
             margin: 0 15px;
             font-size: 16px;
@@ -178,7 +182,7 @@
         }
 
         .highlight {
-            background-color: var(--primary-color);
+            background-color: var(--highlight-background);
             padding: 10px;
             border-radius: 5px;
         }
@@ -189,6 +193,7 @@
             padding: 10px;
             background-color: #e0e0e0;
             border-left: 5px solid var(--primary-color);
+            animation: fadeIn 2s ease-in-out;
         }
 
         .callout {
@@ -197,6 +202,23 @@
             background-color: #f0f0f0;
             border-radius: 10px;
             border: 1px solid var(--primary-color);
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .image-container {
+            width: 100%;
+            height: auto;
+            margin: 20px 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: auto;
+            max-height: 500px;
+            object-fit: cover;
+            border-radius: 10px;
         }
 
         @media (max-width: 768px) {
@@ -250,49 +272,49 @@
             width: 80%;
             margin: 60px auto;
         }
+
+        .copy {
+            color: white;
+        }
     </style>
 </head>
-
 <body>
     <header>
         <div class="logo">
-            <a href="index-en.html"><img src="/assets/logo.png" alt="USP Hannover Logo"></a>
+            <a href="/index.html"><img src="/assets/logo.png" alt="USP Hannover Logo"></a>
         </div>
-        
     </header>
 
     <main>
-        <section id="home">
-            <h1>Work Isn't Everything!</h1>
-            <p>Did you know that, on average, an entrepreneur spends about 90,000 to 100,000 hours in their business? Consecutively, this would be over 10 years of pure working time without sleep, leisure, and evenings off. Some entrepreneurs manage even more. However, work not only consumes time but also demands physical and mental effort from people. It often makes us sick. Therefore, it is only logical to consider how we can use these many years sensibly to achieve the necessary satisfaction both personally and financially.</p><br>
-            <div class="quote">
-                "The balance between work and life is crucial for long-term success and health."
+        <section id="sparring">
+            <h2>Was ist eigentlich „Sparring?“</h2>
+            <div class="image-container">
+                <img src="/assets/7.jpeg" alt="Sparring Image">
             </div>
+            <p><strong>USP Hannover</strong> ist Ihr Partner für erfolgreiche Familienunternehmen in den spannenden und herausfordernden Zeiten der Digitalisierung, Künstlichen Intelligenz, des Fachkräftemangels und der Nachhaltigkeit.</p>
+            <p>Als Unternehmer wissen Sie, dass eine ausgewogene Unternehmensstrategie ebenso wichtig ist wie Ihre persönliche Performance und Balance.</p>
+            <p>Seit 25 Jahren unterstützen wir Inhaber von Familienunternehmen deutschlandweit dabei, ihre unternehmerische Verantwortung wahrzunehmen und den langfristigen Erfolg ihres Unternehmens zu sichern.</p>
+            <p>Wir helfen Ihnen, die anspruchsvolle Rolle als Inhaber mit den richtigen Strategien und unserer langjährigen Erfahrung zu meistern – immer mit Blick auf Sie als Mensch.</p>
+            <p>Unsere Analyse umfasst alle Unternehmensbereiche und Ihr persönliches Lebensrad.</p>
+            <p>Unsere Netzwerkpartner aus Medizin, Coaching und Therapie begleiten Sie bei Bedarf, um Ihre Gesundheit und Leistungsfähigkeit langfristig zu erhalten.</p>
+            <a href="contact.html" class="btn-primary">Kontaktieren Sie uns</a>
         </section>
+
         <hr>
-        <section id="about">
-            <h2>Our Approach</h2>
-            <p>Based on our personal experiences over 25 years from consulting, supporting, and advising as tax consultants and partners in a large consulting firm, the balance between "being an entrepreneur" and private life in an entrepreneurial environment has become particularly important to us. In the course of our activities, we have realized that the success of a company does not only depend on revenue and profit but also on the personal performance, energy, and health of the entrepreneur and their responsibility for themselves. Therefore, our goal is to accompany entrepreneurs on their way to more success, more uniqueness, and more personal satisfaction as your sparring partner on your way to a successful and fulfilling (entrepreneurial) life. For us, communication and contact at eye level as well as a trustful working atmosphere with the client are particularly important and the basis of our mission.</p>
-            <br><div class="callout">
-                <p>As your sparring partner and advisor, we bring you the decisive step forward - try it out and let's talk.</p>
-            </div>
-            <div class="icon-row">
-                <i class='bx bx-briefcase'></i>
-                <i class='bx bx-rocket'></i>
-                <i class='bx bx-heart'></i>
-            </div>
-            <a href="contact-en.html" class="btn-primary">Contact Us</a>
-        </section>
+        <div class="icon-row">
+            <i class='bx bx-user'></i>
+            <i class='bx bx-briefcase'></i>
+            <i class='bx bx-heart'></i>
+        </div>
     </main>
 
     <footer>
-        <p class="copy">&copy; 2024 USP Hannover. All rights reserved.</p>
+        <p class="copy">&copy; 2024 USP Hannover. Alle Rechte vorbehalten.</p>
         <div class="icons">
-            <a href="imprint.html"><i class='bx bxs-file'></i> Imprint</a>
-            <a href="privacy-en.html"><i class='bx bxs-lock-alt'></i> Privacy Policy</a>
-        </div>
-        <br>
-        <p class="credit">Realisé par 
+            <a href="/de/impressum.html"><i class='bx bxs-file'></i> Impressum</a>
+            <a href="/de/privacy.html"><i class='bx bxs-lock-alt'></i> Datenschutzerklärung</a>
+        </div><br>
+        <p class="credit">Réalisé par 
             <a href="https://huhpact.dev">
                 <img class="img-credit" src="/assets/logo-huhpact.png" alt="huh(pact)">
             </a>
@@ -311,5 +333,4 @@
 
     </script>
 </body>
-
 </html>

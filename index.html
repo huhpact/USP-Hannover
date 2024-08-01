@@ -679,7 +679,7 @@
             <div class="dropdown">
                 <a href="#">Mehr <i class='bx bxs-chevron-down'></i></a>
                 <div class="dropdown-content">
-                    <a href="#">Weitere Seite 1</a>
+                    <a href="/de/sparring.html">Sparring</a>
                     <a href="#">Weitere Seite 2</a>
                     <a href="#">Weitere Seite 3</a>
                 </div>
@@ -902,6 +902,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
             setTimeout(type, newTextDelay + 250);
         });
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
     </script>
 </body>
 

@@ -239,5 +239,17 @@
             <a href="https://huhpact.dev">
                 <img class="img-credit"  src="/assets/logo-huhpact.png" alt="huh(pact)"></a></p>
     </footer>
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
+    </script>
 </body>
 </html>

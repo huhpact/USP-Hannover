@@ -39,13 +39,31 @@ header nav a {
     text-decoration: none;
     margin: 0 15px;
     font-size: 18px;
-    transition: color 0.3s, font-size 0.3s;
+    position: relative;
+    transition: color 0.3s;
+}
+
+header nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    margin-top: 5px;
+    right: 0;
+    background: white;
+    transition: width 0.3s ease, right 0.3s ease;
+}
+
+header nav a:hover::after {
+    width: 100%;
+    right: 0;
 }
 
 header nav a:hover {
     color: white;
-    font-size: 20px;
 }
+
 
 .logo img {
     height: 100px;

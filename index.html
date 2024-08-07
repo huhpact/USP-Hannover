@@ -35,6 +35,7 @@
                 <a href="#">Mehr <i class='bx bxs-chevron-down'></i></a>
                 <div class="dropdown-content">
                     <a href="/de/sparring.html">Sparring</a>
+                    <a href="#quiz">Unternehmens-Test</a>
                 </div>
             </div>
             <div class="language-selector" onclick="location.href='/en/index-en.html';">
@@ -128,6 +129,123 @@
             <a href="/de/contact.html" class="button-52">Kontakt aufnehmen</a>
         </section>
         </div>
+<hr>
+        <section id="quiz" class="quiz-container">
+            <h2>Haben Sie Verbesserungsbedarf?</h2>
+            <div class="quiz-step" id="step-1">
+                <p class="quiz-question">Wie zufrieden sind Sie mit Ihrer aktuellen Unternehmensstrategie?</p>
+                <ul class="quiz-options">
+                    <li>
+                        <input type="radio" id="q1-a" name="question1" value="a">
+                        <label for="q1-a">Sehr zufrieden</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="q1-b" name="question1" value="b">
+                        <label for="q1-b">Zufrieden</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="q1-c" name="question1" value="c">
+                        <label for="q1-c">Neutral</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="q1-d" name="question1" value="d">
+                        <label for="q1-d">Unzufrieden</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="q1-e" name="question1" value="e">
+                        <label for="q1-e">Sehr unzufrieden</label>
+                    </li>
+                </ul>
+                <button class="btn-primary" onclick="nextStep(1)">Weiter</button>
+            </div>
+        
+            <div class="quiz-step" id="step-2" style="display: none;">
+                <p class="quiz-question">Wie gut ist Ihre digitale Transformation vorangeschritten?</p>
+                <ul class="quiz-options">
+                    <li>
+                        <input type="radio" id="q2-a" name="question2" value="a">
+                        <label for="q2-a">Sehr gut</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="q2-b" name="question2" value="b">
+                        <label for="q2-b">Gut</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="q2-c" name="question2" value="c">
+                        <label for="q2-c">Neutral</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="q2-d" name="question2" value="d">
+                        <label for="q2-d">Schlecht</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="q2-e" name="question2" value="e">
+                        <label for="q2-e">Sehr schlecht</label>
+                    </li>
+                </ul>
+                <button class="btn-primary" onclick="nextStep(2)">Weiter</button>
+            </div>
+        
+            <div class="quiz-step" id="step-3" style="display: none;">
+                <p class="quiz-question">Wie bewerten Sie Ihre Mitarbeiterzufriedenheit?</p>
+                <ul class="quiz-options">
+                    <li>
+                        <input type="radio" id="q3-a" name="question3" value="a">
+                        <label for="q3-a">Sehr gut</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="q3-b" name="question3" value="b">
+                        <label for="q3-b">Gut</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="q3-c" name="question3" value="c">
+                        <label for="q3-c">Neutral</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="q3-d" name="question3" value="d">
+                        <label for="q3-d">Schlecht</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="q3-e" name="question3" value="e">
+                        <label for="q3-e">Sehr schlecht</label>
+                    </li>
+                </ul>
+                <button class="btn-primary" onclick="nextStep(3)">Weiter</button>
+            </div>
+        
+            <div class="quiz-step" id="step-4" style="display: none;">
+                <p class="quiz-question">Wie gut sind Sie auf zukünftige Herausforderungen vorbereitet?</p>
+                <ul class="quiz-options">
+                    <li>
+                        <input type="radio" id="q4-a" name="question4" value="a">
+                        <label for="q4-a">Sehr gut</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="q4-b" name="question4" value="b">
+                        <label for="q4-b">Gut</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="q4-c" name="question4" value="c">
+                        <label for="q4-c">Neutral</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="q4-d" name="question4" value="d">
+                        <label for="q4-d">Schlecht</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="q4-e" name="question4" value="e">
+                        <label for="q4-e">Sehr schlecht</label>
+                    </li>
+                </ul>
+                <button class="btn-primary" onclick="showResult()">Ergebnis anzeigen</button>
+            </div>
+        
+            <div id="quiz-result" class="result" style="display: none;">
+                <p>Vielen Dank, dass Sie den Test gemacht haben. Ihr Unternehmen <span class="result-span">hat Verbesserungsbedarf.</span> Bitte kontaktieren Sie uns, um eine Beratung zu erhalten.</p>
+                <a href="/de/contact.html" class="btn-primary">Kontaktieren Sie uns</a>
+            </div>
+        </section>
+        
     </main>
 
     <footer>
@@ -261,6 +379,47 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+function nextStep(step) {
+    const currentStep = document.getElementById(`step-${step}`);
+    const nextStep = document.getElementById(`step-${step + 1}`);
+    const options = currentStep.querySelectorAll('input[type="radio"]');
+
+    let selected = false;
+    options.forEach(option => {
+        if (option.checked) {
+            selected = true;
+        }
+    });
+
+    if (selected) {
+        currentStep.style.display = 'none';
+        nextStep.style.display = 'block';
+    } else {
+        alert('Bitte wählen Sie eine Option.');
+    }
+}
+
+function showResult() {
+    const currentStep = document.getElementById('step-4');
+    const result = document.getElementById('quiz-result');
+    const options = currentStep.querySelectorAll('input[type="radio"]');
+
+    let selected = false;
+    options.forEach(option => {
+        if (option.checked) {
+            selected = true;
+        }
+    });
+
+    if (selected) {
+        currentStep.style.display = 'none';
+        result.style.display = 'block';
+    } else {
+        alert('Bitte wählen Sie eine Option.');
+    }
+}
+
 
     </script>
 </body>

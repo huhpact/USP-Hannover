@@ -29,6 +29,7 @@
                 <a href="#">More <i class='bx bxs-chevron-down'></i></a>
                 <div class="dropdown-content">
                     <a href="/en/sparring-en.html">Sparring</a>
+                    <a href="#quiz">Company Needs Quiz</a>
                 </div>
             </div>
             <div class="language-selector" onclick="location.href='/index.html';">
@@ -70,7 +71,7 @@
             <h2>We support you!</h2>
             <p>Work with us to develop a strategy on how your company can continue to grow in the long term, become more successful and even more unique. And how you can live a happier and less stressful life. Through our collaboration, we develop a structured action plan that encompasses your company and your personal situation.</p>
             <p>We offer a variety of services aimed at improving your business and helping you achieve your goals. From consulting to implementation - we are here for you.</p>
-            <a href="services.html" class="button-52">Our services <i class='bx bx-chevron-right'></i></a>
+            <a href="services.html" class="button-52">Our services</a>
             <img class="section-image" src="/assets/index/2.jpg" alt="Unterstützung für Unternehmen">
         </section>
 
@@ -90,7 +91,7 @@
                     <h3>Managing Partner</h3>
                 </div>
             </div>
-            <a href="aboutus-en.html" class="button-52">More about us <i class='bx bx-chevron-right'></i></a>
+            <a href="aboutus-en.html" class="button-52">More about us</a>
         </section>
 
         <hr>
@@ -103,8 +104,126 @@
                 <li>If you are interested in working with us, then book an online session with us. This is free of charge for you, but will take you a big step forward. Guaranteed!</li><br>
                 <li>However, it will already open your eyes to opportunities for improvement that will help you immediately! So take advantage of this opportunity and make an appointment.</li><br>
             </ul>
-            <a href="contact-en.html" class="button-52">Contact us <i class='bx bx-chevron-right'></i></a>
+            <a href="contact-en.html" class="button-52">Contact us</a>
         </section>
+        <hr>
+        <section id="quiz" class="quiz-container">
+            <h2>Do You Have Improvement Needs?</h2>
+            <div class="quiz-step" id="step-1">
+                <p class="quiz-question">How satisfied are you with your current business strategy?</p>
+                <ul class="quiz-options">
+                    <li>
+                        <input type="radio" id="q1-a" name="question1" value="a">
+                        <label for="q1-a">Very Satisfied</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="q1-b" name="question1" value="b">
+                        <label for="q1-b">Satisfied</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="q1-c" name="question1" value="c">
+                        <label for="q1-c">Neutral</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="q1-d" name="question1" value="d">
+                        <label for="q1-d">Dissatisfied</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="q1-e" name="question1" value="e">
+                        <label for="q1-e">Very Dissatisfied</label>
+                    </li>
+                </ul>
+                <button class="btn-primary" onclick="nextStep(1)">Next</button>
+            </div>
+        
+            <div class="quiz-step" id="step-2" style="display: none;">
+                <p class="quiz-question">How advanced is your digital transformation?</p>
+                <ul class="quiz-options">
+                    <li>
+                        <input type="radio" id="q2-a" name="question2" value="a">
+                        <label for="q2-a">Very Good</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="q2-b" name="question2" value="b">
+                        <label for="q2-b">Good</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="q2-c" name="question2" value="c">
+                        <label for="q2-c">Neutral</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="q2-d" name="question2" value="d">
+                        <label for="q2-d">Poor</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="q2-e" name="question2" value="e">
+                        <label for="q2-e">Very Poor</label>
+                    </li>
+                </ul>
+                <button class="btn-primary" onclick="nextStep(2)">Next</button>
+            </div>
+        
+            <div class="quiz-step" id="step-3" style="display: none;">
+                <p class="quiz-question">How would you rate your employee satisfaction?</p>
+                <ul class="quiz-options">
+                    <li>
+                        <input type="radio" id="q3-a" name="question3" value="a">
+                        <label for="q3-a">Very Good</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="q3-b" name="question3" value="b">
+                        <label for="q3-b">Good</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="q3-c" name="question3" value="c">
+                        <label for="q3-c">Neutral</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="q3-d" name="question3" value="d">
+                        <label for="q3-d">Poor</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="q3-e" name="question3" value="e">
+                        <label for="q3-e">Very Poor</label>
+                    </li>
+                </ul>
+                <button class="btn-primary" onclick="nextStep(3)">Next</button>
+            </div>
+        
+            <div class="quiz-step" id="step-4" style="display: none;">
+                <p class="quiz-question">How well are you prepared for future challenges?</p>
+                <ul class="quiz-options">
+                    <li>
+                        <input type="radio" id="q4-a" name="question4" value="a">
+                        <label for="q4-a">Very Well</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="q4-b" name="question4" value="b">
+                        <label for="q4-b">Well</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="q4-c" name="question4" value="c">
+                        <label for="q4-c">Neutral</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="q4-d" name="question4" value="d">
+                        <label for="q4-d">Poorly</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="q4-e" name="question4" value="e">
+                        <label for="q4-e">Very Poorly</label>
+                    </li>
+                </ul>
+                <button class="btn-primary" onclick="showResult()">Show Result</button>
+            </div>
+        
+            <div id="quiz-result" class="result" style="display: none;">
+                <p>Thank you for taking the test. Your company <span class="result-span">has improvement needs.</span> Please contact us for a consultation.</p>
+                <a href="contact-en.html" class="btn-primary">Contact Us</a>
+            </div>
+        </section>
+        
+        
     </main>
 
     <footer>
@@ -192,6 +311,31 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+function nextStep(step) {
+    const currentStep = document.getElementById(`step-${step}`);
+    const nextStep = document.getElementById(`step-${step + 1}`);
+    const options = currentStep.querySelectorAll('input[type="radio"]');
+
+    let selected = false;
+    options.forEach(option => {
+        if (option.checked) {
+            selected = true;
+        }
+    });
+
+    if (selected) {
+        currentStep.style.display = 'none';
+        nextStep.style.display = 'block';
+    } else {
+        alert('Please select an option.');
+    }
+}
+
+function showResult() {
+    const currentStep = document.querySelector('.quiz-step:not([style*="display: none"])');
+    currentStep.style.display = 'none';
+    document.getElementById('quiz-result').style.display = 'block';
+}
 
     </script>
 </body>

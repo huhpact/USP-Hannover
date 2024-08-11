@@ -14,11 +14,11 @@
     <link rel="icon" href="/assets/about-us/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="/assets/about-us/SRMZkeogzt.css">
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/scrollreveal/4.0.9/scrollreveal.min.js"></script>
-    <script defer src="script.js"></script>
 </head>
 
 <body>
     <header>
+        <!--Logo + Header-->
         <div class="logo">
             <a href="/index.html"><img src="/assets/about-us/logo.png" alt="USP Hannover Logo"></a>
         </div>
@@ -26,14 +26,17 @@
     </header>
 
     <main>
+        <!--Accueil-->
         <section id="home">
             <h1>Arbeit ist nicht alles!</h1>
             <p>Wussten Sie schon, dass man als Unternehmer im Durchschnitt ca. 90.000 bis 100.000 Stunden im Unternehmen verbringt? Direkt hintereinander wären das über 10 Jahre reine Arbeitszeit ohne Schlaf, Freizeit und Feierabend. Manche Unternehmer schaffen auch noch mehr. Die Arbeit nimmt aber nicht nur Zeit in Anspruch, sondern fordert den Menschen auch physisch und psychisch. Häufig macht sie uns auch krank. Daher ist es ganz logisch, sich zu überlegen, wie wir diese vielen Jahre sinnvoll nutzen können, um die notwendige Zufriedenheit in persönlicher als auch in finanzieller Hinsicht zu erreichen.</p><br>
+            <!--Quote modifiable-->
             <div class="quote">
                 "Die Balance zwischen Arbeit und Leben ist entscheidend für langfristigen Erfolg und Gesundheit."
             </div>
         </section>
         <hr>
+        <!--À propos de nous-->
         <section id="about">
             <h2>Unser Ansatz</h2>
             <p>Aufgrund unserer persönlichen Erfahrungen über 25 Jahre aus der Beratung, Begleitung und Unterstützung als Steuerberater und Partner in einem großen Beratungsunternehmen ist uns die Balance zwischen „Unternehmer sein“ und Privatleben im unternehmerischen Umfeld besonders wichtig geworden. Im Rahmen unserer Tätigkeiten haben wir dabei erkannt, dass der Erfolg eines Unternehmens nicht nur von Umsatz und Ertrag abhängig ist, sondern auch von der persönlichen Leistungsfähigkeit, der Energie und der Gesundheit des Unternehmers und dessen Verantwortung für sich selbst. Daher ist unser Ziel, Unternehmerinnen und Unternehmer auf dem Weg zu mehr Erfolg, mehr Einzigartigkeit und mehr persönlicher Zufriedenheit als Ihr Sparringspartner auf Ihrem Weg zu einem erfolgreichen und erfüllten (Unternehmer)leben zu begleiten. Dabei ist für uns die Kommunikation und der Kontakt auf Augenhöhe sowie die vertrauensvolle Arbeitsatmosphäre mit dem Kunden besonders wichtig und Grundlage unseres Auftrags.</p>
@@ -41,16 +44,16 @@
                 <p>Als Ihr Sparringspartner und Ratgeber bringen wir Sie den entscheidenden Schritt voran – probieren Sie es aus und lassen Sie uns sprechen.</p>
             </div>
             <div class="icon-row">
-                <i class='bx bx-briefcase'></i>
-                <i class='bx bx-rocket'></i>
-                <i class='bx bx-heart'></i>
+                <i class='bx bx-briefcase scroll-element'></i>
+                <i class='bx bx-rocket scroll-element'></i>
+                <i class='bx bx-heart scroll-element'></i>
             </div>
             <a href="contact.html" class="btn-primary">Kontaktieren Sie uns</a>
         </section>
     </main>
 
     <footer>
-        <p class="copy">&copy; 2024 USP Hannover. Alle Rechte vorbehalten.</p>
+        <p class="copyright-disclaimer">&copy; 2024 USP Hannover. Alle Rechte vorbehalten.</p>
         <div class="icons">
             <a href="/de/impressum.html"><i class='bx bxs-file'></i> Impressum</a>
             <a href="/de/privacy.html"><i class='bx bxs-lock-alt'></i> Datenschutzerklärung</a>
@@ -63,14 +66,41 @@
         </p>
     </footer>
     <script>
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
+       document.addEventListener('DOMContentLoaded', function() {
+    const scrollElements = document.querySelectorAll('.scroll-element');
 
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
+    const elementInView = (el, percentageScroll = 100) => {
+        const elementTop = el.getBoundingClientRect().top;
+
+        return (
+            elementTop <= 
+            ((window.innerHeight || document.documentElement.clientHeight) * (percentageScroll / 100))
+        );
+    };
+
+    const displayScrollElement = (element) => {
+        element.classList.add('in-view');
+    };
+
+    const hideScrollElement = (element) => {
+        element.classList.remove('in-view');
+    };
+
+    const handleScrollAnimation = () => {
+        scrollElements.forEach((el) => {
+            if (elementInView(el, 100)) {
+                displayScrollElement(el);
+            } else {
+                hideScrollElement(el);
+            }
         });
+    };
+
+    window.addEventListener('scroll', () => {
+        handleScrollAnimation();
     });
+
+    handleScrollAnimation();
 });
 
     </script>

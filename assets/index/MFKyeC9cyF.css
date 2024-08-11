@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 :root {
     --headcolor: #71835f;
 	--primary-color: #FED16E;
@@ -17,7 +17,7 @@ html, body {
 }
 
 body {
-    font-family: 'Avenir Next LT Pro', sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     color: #32373C;
@@ -149,7 +149,7 @@ h2 {
 
 p,
 span {
-    font-family: 'Avenir Next LT Pro Light', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 20px;
     line-height: 1.6;
     margin: 0 15%;
@@ -254,8 +254,7 @@ footer .icons a:hover {
     font-size: 16px;
 }
 
-
-hr {
+.divider {
     border: 1px solid black;
     width: 80%;
     margin: 60px auto;
@@ -589,89 +588,6 @@ section h1, h2 {
     text-align: center;
 }
 
-.fullscreen-gallery {
-position: relative;
-overflow: hidden;
-width: 100%;
-height: 100vh; 
-}
-
-.gallery-container {
-display: flex;
-transition: transform 0.5s ease-in-out;
-height: 100%;
-position: relative;
-}
-
-.gallery-image {
-min-width: 100%;
-height: 100vh;
-object-fit: cover;
-opacity: 0;
-position: absolute;
-transition: opacity 0.5s ease-in-out;
-}
-
-.gallery-image.active {
-opacity: 1;
-position: absolute;
-left: 0;
-top: 0;
-width: 100%;
-transition: opacity 0.5s ease-in-out;
-}
-
-.arrow {
-position: absolute;
-top: 50%;
-transform: translateY(-50%);
-color: white;
-font-size: 2em;
-padding: 10px;
-cursor: pointer;
-user-select: none;
-display: none;
-}
-
-.fullscreen-gallery:hover .arrow {
-display: block;
-}
-
-.left-arrow {
-left: 10px;
-}
-
-.right-arrow {
-right: 10px;
-}
-
-.dots-container {
-position: absolute;
-bottom: 20px;
-left: 50%;
-transform: translateX(-50%);
-display: flex;
-}
-
-.dots-container .dot {
-height: 10px;
-width: 10px;
-margin: 0 5px;
-background-color: rgba(255, 255, 255, 0.5);
-border-radius: 50%;
-cursor: pointer;
-}
-
-.dots-container .dot.active {
-background-color: rgba(255, 255, 255, 1);
-}
-
-@media (max-width: 768px) {
-.arrow {
-font-size: 1.5em;
-}
-}
-
 
 .quiz-container {
     max-width: 80%;
@@ -817,4 +733,15 @@ font-size: 1.5em;
     background-color: var(--accent-color);
     text-align: center;
     margin: 0;
+}
+
+.scroll-element {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.scroll-element.in-view {
+    opacity: 1;
+    transform: translateY(0);
 }

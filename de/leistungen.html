@@ -24,11 +24,11 @@
     </header>
 
     <section>
-        <h1>Unsere Leistungen im Überblick</h1>
+        <h1 class="scroll-element">Unsere Leistungen im Überblick</h1>
 
         <hr>
 
-        <h2>Für Ihr Unternehmen</h2><br>
+        <h2 class="scroll-element">Für Ihr Unternehmen</h2><br>
 
         <div class="services">
             <div class="service-box">
@@ -70,7 +70,7 @@
 
         <hr>
 
-        <h2>Für Ihre persönliche Performance und Leistungsfähigkeit</h2>
+        <h2 class="scroll-element">Für Ihre persönliche Performance und Leistungsfähigkeit</h2>
 
         <div class="services">
             <div class="service-box">
@@ -128,6 +128,45 @@
         });
     });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const scrollElements = document.querySelectorAll('.scroll-element');
+
+    const elementInView = (el, percentageScroll = 100) => {
+        const elementTop = el.getBoundingClientRect().top;
+
+        return (
+            elementTop <= 
+            ((window.innerHeight || document.documentElement.clientHeight) * (percentageScroll / 100))
+        );
+    };
+
+    const displayScrollElement = (element) => {
+        element.classList.add('in-view');
+    };
+
+    const hideScrollElement = (element) => {
+        element.classList.remove('in-view');
+    };
+
+    const handleScrollAnimation = () => {
+        scrollElements.forEach((el) => {
+            if (elementInView(el, 100)) {
+                displayScrollElement(el);
+            } else {
+                hideScrollElement(el);
+            }
+        });
+    };
+
+    window.addEventListener('scroll', () => {
+        handleScrollAnimation();
+    });
+
+
+    handleScrollAnimation();
+});
+
 
     </script>
 </body>

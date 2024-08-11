@@ -55,12 +55,7 @@ main {
 	padding: 60px 20px;
 	max-width: 1200px;
 	margin: 0 auto;
-	animation: fadeIn 1s ease-in-out;
-}
-
-@keyframes fadeIn {
-	from { opacity: 0; }
-	to { opacity: 1; }
+	
 }
 
 section h1, section h2 {
@@ -265,4 +260,15 @@ hr {
 
 .copy {
 	color: white;
+}
+
+.scroll-element {
+	opacity: 0;
+	transform: translateY(20px);
+	transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.scroll-element.in-view {
+	opacity: 1;
+	transform: translateY(0);
 }

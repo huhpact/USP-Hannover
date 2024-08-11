@@ -155,8 +155,9 @@ footer .icons a:hover {
 	color: #fff;
 	font-size: 16px;
 }
-.copy {
+.copyright-disclaimer {
 	font-size: 14px;
+	color: white;
 }
 
 .highlight {
@@ -231,4 +232,15 @@ hr {
 	border: 1px solid black;
 	width: 80%;
 	margin: 60px auto;
+}
+
+.scroll-element {
+	opacity: 0;
+	transform: translateY(20px);
+	transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.scroll-element.in-view {
+	opacity: 1;
+	transform: translateY(0);
 }

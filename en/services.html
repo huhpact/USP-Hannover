@@ -31,37 +31,37 @@
         <h2>For Your Company</h2>
 
         <div class="services">
-            <div class="service-box">
+            <div class="service-box scroll-element">
                 <i class='bx bxs-rocket'></i>
                 <h3>Unique Market Position</h3>
                 <p>Support in developing a unique market position</p>
             </div>
-            <div class="service-box">
+            <div class="service-box scroll-element">
                 <i class='bx bxs-analyse' style='color: var(--headcolor)' ></i>
                 <h3>Analyses</h3>
                 <p>Conducting analyses in the areas of employees and personnel, processes and organization, customers and sales, finances, and strategic orientation</p>
             </div>
-            <div class="service-box">
+            <div class="service-box scroll-element">
                 <i class='bx bx-refresh' style='color: var(--headcolor)' ></i>
                 <h3>Restructuring</h3>
                 <p>Accompanying restructuring and succession processes</p>
             </div>
-            <div class="service-box">
+            <div class="service-box scroll-element">
                 <i class='bx bxs-chart'></i>
                 <h3>Key Performance Indicators</h3>
                 <p>Building forward-looking key performance indicator systems</p>
             </div>
-            <div class="service-box">
+            <div class="service-box scroll-element">
                 <i class='bx bx-target-lock' style='color: var(--headcolor)' ></i>
                 <h3>Action Fields</h3>
                 <p>Identification of fields of action and needs</p>
             </div>
-            <div class="service-box">
+            <div class="service-box scroll-element">
                 <i class='bx bxs-flag-checkered'></i>
                 <h3>Goals</h3>
                 <p>Defining achievable goals for long-term positive business development</p>
             </div>
-            <div class="service-box">
+            <div class="service-box scroll-element">
                 <i class='bx bxs-check-shield'></i>
                 <h3>Implementation of Measures</h3>
                 <p>Support in implementing the defined measures to achieve goals</p>
@@ -73,32 +73,32 @@
         <h2>For Your Personal Performance and Efficiency</h2>
 
         <div class="services">
-            <div class="service-box">
+            <div class="service-box scroll-element">
                 <i class='bx bxs-heart-circle'></i>
                 <h3>Lifestyle Influencing Factors</h3>
                 <p>Analysis of lifestyle influencing factors, nutrition, stress, exercise and sports, family, and relationships</p>
             </div>
-            <div class="service-box">
+            <div class="service-box scroll-element">
                 <i class='bx bxs-bar-chart-alt-2'></i>
                 <h3>Health Parameters</h3>
                 <p>Interpretation of health parameters</p>
             </div>
-            <div class="service-box">
+            <div class="service-box scroll-element">
                 <i class='bx bxs-flask'></i>
                 <h3>Health Tests</h3>
                 <p>Conducting and accompanying holistic health tests</p>
             </div>
-            <div class="service-box">
+            <div class="service-box scroll-element">
                 <i class='bx bx-target-lock' style='color: var(--headcolor)' ></i>
                 <h3>Action Fields</h3>
                 <p>Identification of fields of action and needs</p>
             </div>
-            <div class="service-box">
+            <div class="service-box scroll-element">
                 <i class='bx bxs-flag-checkered'></i>
                 <h3>Personal Goals</h3>
                 <p>Defining personally achievable goals</p>
             </div>
-            <div class="service-box">
+            <div class="service-box scroll-element">
                 <i class='bx bxs-check-shield'></i>
                 <h3>Implementation of Measures</h3>
                 <p>Support in implementing the defined measures to achieve goals</p>
@@ -127,6 +127,44 @@
             behavior: 'smooth'
         });
     });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const scrollElements = document.querySelectorAll('.scroll-element');
+
+    const elementInView = (el, percentageScroll = 100) => {
+        const elementTop = el.getBoundingClientRect().top;
+
+        return (
+            elementTop <= 
+            ((window.innerHeight || document.documentElement.clientHeight) * (percentageScroll / 100))
+        );
+    };
+
+    const displayScrollElement = (element) => {
+        element.classList.add('in-view');
+    };
+
+    const hideScrollElement = (element) => {
+        element.classList.remove('in-view');
+    };
+
+    const handleScrollAnimation = () => {
+        scrollElements.forEach((el) => {
+            if (elementInView(el, 100)) {
+                displayScrollElement(el);
+            } else {
+                hideScrollElement(el);
+            }
+        });
+    };
+
+    window.addEventListener('scroll', () => {
+        handleScrollAnimation();
+    });
+
+    // Trigger on load
+    handleScrollAnimation();
 });
 
     </script>

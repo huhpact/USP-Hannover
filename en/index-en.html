@@ -73,7 +73,7 @@
             <p>Work with us to develop a strategy on how your company can continue to grow in the long term, become more successful and even more unique. And how you can live a happier and less stressful life. Through our collaboration, we develop a structured action plan that encompasses your company and your personal situation.</p>
             <p>We offer a variety of services aimed at improving your business and helping you achieve your goals. From consulting to implementation - we are here for you.</p>
             <a href="services.html" class="button-52">Our services</a>
-            <img class="section-image" src="/assets/index/2.jpg" alt="Unterstützung für Unternehmen">
+            <img class="section-image scroll-element" src="/assets/index/2.jpg" alt="Unterstützung für Unternehmen">
         </section>
 
         <hr>
@@ -82,12 +82,12 @@
             <h1>About us</h1>
             <div class="about-container">
                 <div class="about-item">
-                    <img class="presentation" src="/assets/index/carstenklingebiel.png" alt="Carsten Klingebiel">
+                    <img class="presentation scroll-element" src="/assets/index/carstenklingebiel.png" alt="Carsten Klingebiel">
                     <h2 style="color: black;">Carsten Klingebiel</h2>
                     <h3>Managing Partner</h3>
                 </div>
                 <div class="about-item">
-                    <img class="presentation" src="/assets/index/juliachappuzeau.png" alt="Julia Chappuzeau">
+                    <img class="presentation scroll-element" src="/assets/index/juliachappuzeau.png" alt="Julia Chappuzeau">
                     <h2 style="color: black;">Julia Chappuzeau</h2>
                     <h3>Managing Partner</h3>
                 </div>
@@ -108,7 +108,7 @@
             <a href="contact-en.html" class="button-52">Contact us</a>
         </section>
         <hr>
-        <section id="quiz" class="quiz-container">
+        <section id="quiz" class="quiz-container scroll-element">
             <h2>Do You Have Improvement Needs?</h2>
             <div class="quiz-step" id="step-1">
                 <p class="quiz-question">How satisfied are you with your current business strategy?</p>
@@ -240,103 +240,141 @@
 
     <script>
         function toggleMenu() {
-            const navLinks = document.querySelector('.nav-links');
-            navLinks.classList.toggle('open');
-        }
+	const navLinks = document.querySelector('.nav-links');
+	navLinks.classList.toggle('open');
+}
 
-        document.addEventListener('click', function (event) {
-            const navLinks = document.querySelector('.nav-links');
-            const menuIcon = document.querySelector('.menu-icon');
+document.addEventListener('click', function (event) {
+	const navLinks = document.querySelector('.nav-links');
+	const menuIcon = document.querySelector('.menu-icon');
 
-            if (!navLinks.contains(event.target) && !menuIcon.contains(event.target)) {
-                navLinks.classList.remove('open');
-            }
-        });
+	if (!navLinks.contains(event.target) && !menuIcon.contains(event.target)) {
+			navLinks.classList.remove('open');
+	}
+});
 
-        document.querySelector('.menu-icon').addEventListener('click', function (event) {
-            event.stopPropagation();
-        });
+document.querySelector('.menu-icon').addEventListener('click', function (event) {
+	event.stopPropagation();
+});
 
-        document.querySelector('.nav-links').addEventListener('click', function (event) {
-            event.stopPropagation();
-        });
+document.querySelector('.nav-links').addEventListener('click', function (event) {
+	event.stopPropagation();
+});
 
-        document.addEventListener('DOMContentLoaded', () => {
-    const texts = ["Your Partner for Entrepreneurial Success", "Your Solution for Annoying Bureaucracy", "Help with Skilled Labor Shortage", "Support for Digitalization"];
-    let index = 0;
-    let charIndex = 0;
-    const typingSpeed = 100;
-    const erasingSpeed = 50;
-    const newTextDelay = 2000; 
-    const typedTextElement = document.querySelector('.typed-text');
+document.addEventListener('DOMContentLoaded', () => {
+const texts = ["Your Partner for Entrepreneurial Success", "Your Solution for Annoying Bureaucracy", "Help with Skilled Labor Shortage", "Support for Digitalization"];
+let index = 0;
+let charIndex = 0;
+const typingSpeed = 100;
+const erasingSpeed = 50;
+const newTextDelay = 2000; 
+const typedTextElement = document.querySelector('.typed-text');
 
-    function type() {
-        if (charIndex < texts[index].length) {
-            typedTextElement.textContent += texts[index].charAt(charIndex);
-            updateBackgroundWidth();
-            charIndex++;
-            setTimeout(type, typingSpeed);
-        } else {
-            setTimeout(erase, newTextDelay);
-        }
-    }
+function type() {
+if (charIndex < texts[index].length) {
+	typedTextElement.textContent += texts[index].charAt(charIndex);
+	updateBackgroundWidth();
+	charIndex++;
+	setTimeout(type, typingSpeed);
+} else {
+	setTimeout(erase, newTextDelay);
+}
+}
 
-    function erase() {
-        if (charIndex > 0) {
-            typedTextElement.textContent = texts[index].substring(0, charIndex - 1);
-            updateBackgroundWidth();
-            charIndex--;
-            setTimeout(erase, erasingSpeed);
-        } else {
-            index++;
-            if (index >= texts.length) index = 0;
-            setTimeout(type, typingSpeed + 1100);
-        }
-    }
+function erase() {
+if (charIndex > 0) {
+	typedTextElement.textContent = texts[index].substring(0, charIndex - 1);
+	updateBackgroundWidth();
+	charIndex--;
+	setTimeout(erase, erasingSpeed);
+} else {
+	index++;
+	if (index >= texts.length) index = 0;
+	setTimeout(type, typingSpeed + 1100);
+}
+}
 
-    function updateBackgroundWidth() {
-        const textWidth = typedTextElement.offsetWidth;
-        typedTextElement.style.setProperty('--background-width', `${textWidth}px`);
-    }
+function updateBackgroundWidth() {
+const textWidth = typedTextElement.offsetWidth;
+typedTextElement.style.setProperty('--background-width', `${textWidth}px`);
+}
 
-    setTimeout(type, newTextDelay + 250);
+setTimeout(type, newTextDelay + 250);
 });
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
+anchor.addEventListener('click', function(e) {
+e.preventDefault();
 
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
+document.querySelector(this.getAttribute('href')).scrollIntoView({
+	behavior: 'smooth'
+});
+});
 });
 
 function nextStep(step) {
-    const currentStep = document.getElementById(`step-${step}`);
-    const nextStep = document.getElementById(`step-${step + 1}`);
-    const options = currentStep.querySelectorAll('input[type="radio"]');
+const currentStep = document.getElementById(`step-${step}`);
+const nextStep = document.getElementById(`step-${step + 1}`);
+const options = currentStep.querySelectorAll('input[type="radio"]');
 
-    let selected = false;
-    options.forEach(option => {
-        if (option.checked) {
-            selected = true;
-        }
-    });
+let selected = false;
+options.forEach(option => {
+if (option.checked) {
+	selected = true;
+}
+});
 
-    if (selected) {
-        currentStep.style.display = 'none';
-        nextStep.style.display = 'block';
-    } else {
-        alert('Please select an option.');
-    }
+if (selected) {
+currentStep.style.display = 'none';
+nextStep.style.display = 'block';
+} else {
+alert('Please select an option.');
+}
 }
 
 function showResult() {
-    const currentStep = document.querySelector('.quiz-step:not([style*="display: none"])');
-    currentStep.style.display = 'none';
-    document.getElementById('quiz-result').style.display = 'block';
+const currentStep = document.querySelector('.quiz-step:not([style*="display: none"])');
+currentStep.style.display = 'none';
+document.getElementById('quiz-result').style.display = 'block';
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    const scrollElements = document.querySelectorAll('.scroll-element');
+
+    const elementInView = (el, percentageScroll = 100) => {
+        const elementTop = el.getBoundingClientRect().top;
+
+        return (
+            elementTop <= 
+            ((window.innerHeight || document.documentElement.clientHeight) * (percentageScroll / 100))
+        );
+    };
+
+    const displayScrollElement = (element) => {
+        element.classList.add('in-view');
+    };
+
+    const hideScrollElement = (element) => {
+        element.classList.remove('in-view');
+    };
+
+    const handleScrollAnimation = () => {
+        scrollElements.forEach((el) => {
+            if (elementInView(el, 100)) {
+                displayScrollElement(el);
+            } else {
+                hideScrollElement(el);
+            }
+        });
+    };
+
+    window.addEventListener('scroll', () => {
+        handleScrollAnimation();
+    });
+
+
+    handleScrollAnimation();
+});
 
     </script>
 </body>

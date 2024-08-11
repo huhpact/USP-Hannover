@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="de-DE">
 
@@ -11,7 +12,7 @@
     <meta property="og:type" content="website" />
     <meta property="og:title" content="USP Hannover - Ihr Partner für unternehmerischen Erfolg" />
     <meta property="og:description" content="USP Hannover unterstützt mittelständische Unternehmen bei Bürokratie, Fachkräftemangel, Digitalisierung und mehr. Entdecken Sie unsere maßgeschneiderten Lösungen." />
-    <meta property="og:url" content="https://www.usp-hannover.de" />
+    <meta property="og:url" content="" />
     <meta property="og:site_name" content="USP Hannover" />
     <meta name="author" content="USP Hannover">
     <meta name="robots" content="index, follow">
@@ -19,12 +20,10 @@
     <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="/assets/index/MFKyeC9cyF.css">
     <link rel="icon" href="/assets/index/logo.png" type="image/x-icon">
-    <script src="/assets/index/main.js"></script>
 </head>
 
 <body>
     <header>
-        <!--Logo + Navigation-->
         <div class="logo">
             <a href="/index.html"><img src="/assets/index/logo.png" alt="USP Hannover Logo"></a>
         </div>
@@ -48,12 +47,28 @@
             <i class='bx bx-menu'></i>
         </div>
     </header> 
-
-    <!--Plein écran image-->
+    <!--
+    <div class="fullscreen-gallery">
+        <div class="gallery-container">
+            <img src="/assets/schloss.jpg" alt="Image 1" class="gallery-image active">
+            <img src="/assets/6.avif" alt="Image 2" class="gallery-image">
+            <img src="/assets/3.jpg" alt="Image 3" class="gallery-image">
+            <img src="/assets/4.png" alt="Image 4" class="gallery-image">
+            <img src="/assets/5.jpg" alt="Image 5" class="gallery-image">
+        </div>
+        <div class="arrow left-arrow">&#10094;</div>
+        <div class="arrow right-arrow">&#10095;</div>
+        <div class="dots-container"></div>
+    </div>
+    -->
+    
+    
+    
+    <!--FULLSCREEN HANNOVER PICTURE-->
     <div class="fullscreen-section"><div class="content-wrapper"> <h1>Willkommen bei USP Hannover!</h1><div class="typed-text"></div></div></div>
     <main>
        
-            <section id="home">
+            <section id="home" class="snap-item">
             <h1>Kommt Ihnen das auch bekannt vor?</h1>
             <p>
                 Als Inhaber eines mittelständischen Unternehmens stehen Sie tagtäglich vor Herausforderungen wie z.B. Bürokratismus, Fachkräftemangel, Digitalisierung, künstliche Intelligenz und fühlen sich wie in einem „Hamsterrad“.
@@ -66,7 +81,6 @@
             </div>
             
         </section>
-        <!--Banner images -->
         <div class="banner">
             <img src="/assets/index/1.png" alt="Image 1">
             <img src="/assets/index/6.avif" alt="Image 2">
@@ -75,19 +89,18 @@
             <img src="/assets/index/5.jpg" alt="Image 4">
         </div>
     </div>
-        <!--Services-->
-        <section id="angebot" style="margin-top: 0;">
+        <section id="angebot" class="snap-item" style="margin-top: 0;">
             <h1>Dann sind Sie hier genau richtig!</h1>
             <h2>Wir unterstützen Sie!</h2>
             <p>Entwickeln Sie mit uns gemeinsam eine Strategie, wie Ihr Unternehmen langfristig weiterwachsen, erfolgreicher werden und noch einzigartiger werden kann. Und wie Sie zufriedener und stressfreier leben können. Durch unsere Zusammenarbeit entwickeln wir einen strukturierten Maßnahmenplan, der Ihr Unternehmen und Ihre persönliche Situation umfasst.</p>
             <p>Wir bieten eine Vielzahl von Dienstleistungen, die darauf abzielen, Ihr Unternehmen zu verbessern und Ihnen zu helfen, Ihre Ziele zu erreichen. Von der Beratung bis zur Implementierung – wir sind für Sie da.</p>
             <a href="/de/leistungen.html" class="button-52">Unsere Leistungen</a>
-            <img class="section-image scroll-element" src="/assets/index/2.jpg" alt="Unterstützung für Unternehmen">
+            <img class="section-image" src="/assets/index/2.jpg" alt="Unterstützung für Unternehmen">
         </section>
 
-        <div class="divider"></div>
-        <!--À propos de nous-->
-        <section id="ueber-uns">
+        <hr>
+
+        <section id="ueber-uns" class="snap-item">
             <h1>Über uns</h1>
             <div class="about-container">
                 <div class="about-item">
@@ -104,9 +117,9 @@
             <a href="/de/aboutus.html" class="button-52">Mehr über uns</a>
         </section>
 
-        <div class="divider"></div>
-        <!--Contact-->
-        <section id="kontakt">
+        <hr>
+
+        <section id="kontakt" class="snap-item">
             <h1>Wenn Sie bis hierher gelesen haben…</h1>
             <ul>
                 <li>…dann wollen Sie Ihre unternehmerische und persönliche Situation nachhaltig verbessern. Analysieren mit uns Ihr Unternehmer-Leben. Finden Sie mit uns die Unwuchten, solange bis alles rund läuft. Dabei unterstützen wir Sie gerne!</li><br>
@@ -117,9 +130,7 @@
             <a href="/de/contact.html" class="button-52">Kontakt aufnehmen</a>
         </section>
         </div>
-<div class="divider"></div>
-
-        <!--test d'entreprise-->
+<hr>
         <section id="quiz" class="quiz-container">
             <h2>Haben Sie Verbesserungsbedarf?</h2>
             <div class="quiz-step" id="step-1">
@@ -239,7 +250,6 @@
     </main>
 
     <footer>
-        <!--Droits d'auteur-->
         <p class="copy">&copy; 2024 USP Hannover. Alle Rechte vorbehalten.</p>
         <div class="icons">
             <a href="/de/impressum.html"><i class='bx bxs-file'></i> Impressum</a>
@@ -251,42 +261,166 @@
     </footer>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-    const scrollElements = document.querySelectorAll('.scroll-element');
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('open');
+        }
 
-    const elementInView = (el, percentageScroll = 100) => {
-        const elementTop = el.getBoundingClientRect().top;
+        document.addEventListener('click', function (event) {
+            const navLinks = document.querySelector('.nav-links');
+            const menuIcon = document.querySelector('.menu-icon');
 
-        return (
-            elementTop <= 
-            ((window.innerHeight || document.documentElement.clientHeight) * (percentageScroll / 100))
-        );
-    };
-
-    const displayScrollElement = (element) => {
-        element.classList.add('in-view');
-    };
-
-    const hideScrollElement = (element) => {
-        element.classList.remove('in-view');
-    };
-
-    const handleScrollAnimation = () => {
-        scrollElements.forEach((el) => {
-            if (elementInView(el, 100)) {
-                displayScrollElement(el);
-            } else {
-                hideScrollElement(el);
+            if (!navLinks.contains(event.target) && !menuIcon.contains(event.target)) {
+                navLinks.classList.remove('open');
             }
         });
-    };
 
-    window.addEventListener('scroll', () => {
-        handleScrollAnimation();
+        document.querySelector('.menu-icon').addEventListener('click', function (event) {
+            event.stopPropagation();
+        });
+
+        document.querySelector('.nav-links').addEventListener('click', function (event) {
+            event.stopPropagation();
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+    const images = document.querySelectorAll('.gallery-image');
+    const dotsContainer = document.querySelector('.dots-container');
+    const leftArrow = document.querySelector('.left-arrow');
+    const rightArrow = document.querySelector('.right-arrow');
+    let currentIndex = 0;
+    const intervalTime = 5000;
+    let autoSlide;
+
+    images.forEach((image, index) => {
+        const dot = document.createElement('div');
+        dot.classList.add('dot');
+        if (index === 0) dot.classList.add('active');
+        dot.addEventListener('click', () => goToSlide(index));
+        dotsContainer.appendChild(dot);
     });
 
-    handleScrollAnimation();
+    const dots = document.querySelectorAll('.dot');
+
+    const goToSlide = index => {
+        images[currentIndex].classList.remove('active');
+        dots[currentIndex].classList.remove('active');
+
+        currentIndex = index;
+
+        images[currentIndex].classList.add('active');
+        dots[currentIndex].classList.add('active');
+    };
+
+    const nextSlide = () => {
+        goToSlide((currentIndex + 1) % images.length);
+    };
+
+    const prevSlide = () => {
+        goToSlide((currentIndex - 1 + images.length) % images.length);
+    };
+
+    rightArrow.addEventListener('click', nextSlide);
+    leftArrow.addEventListener('click', prevSlide);
+
+    const startAutoSlide = () => {
+        autoSlide = setInterval(nextSlide, intervalTime);
+    };
+
+    const stopAutoSlide = () => {
+        clearInterval(autoSlide);
+    };
+
+    document.querySelector('.fullscreen-gallery').addEventListener('mouseover', stopAutoSlide);
+    document.querySelector('.fullscreen-gallery').addEventListener('mouseout', startAutoSlide);
+
+    startAutoSlide();
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+            const texts = ["Ihr Partner für unternehmerischen Erfolg", "Ihre Lösung für nervende Bürokratie", "Hilfe bei Fachkräftemangel", "Unterstützung bei der Digitalisierung"];
+            let index = 0;
+            let charIndex = 0;
+            const typingSpeed = 100;
+            const erasingSpeed = 50;
+            const newTextDelay = 2000; 
+            const typedTextElement = document.querySelector('.typed-text');
+
+            function type() {
+                if (charIndex < texts[index].length) {
+                    typedTextElement.textContent += texts[index].charAt(charIndex);
+                    charIndex++;
+                    setTimeout(type, typingSpeed);
+                } else {
+                    setTimeout(erase, newTextDelay);
+                }
+            }
+
+            function erase() {
+                if (charIndex > 0) {
+                    typedTextElement.textContent = texts[index].substring(0, charIndex - 1);
+                    charIndex--;
+                    setTimeout(erase, erasingSpeed);
+                } else {
+                    index++;
+                    if (index >= texts.length) index = 0;
+                    setTimeout(type, typingSpeed + 1100);
+                }
+            }
+
+            setTimeout(type, newTextDelay + 250);
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
+function nextStep(step) {
+    const currentStep = document.getElementById(`step-${step}`);
+    const nextStep = document.getElementById(`step-${step + 1}`);
+    const options = currentStep.querySelectorAll('input[type="radio"]');
+
+    let selected = false;
+    options.forEach(option => {
+        if (option.checked) {
+            selected = true;
+        }
+    });
+
+    if (selected) {
+        currentStep.style.display = 'none';
+        nextStep.style.display = 'block';
+    } else {
+        alert('Bitte wählen Sie eine Option.');
+    }
+}
+
+function showResult() {
+    const currentStep = document.getElementById('step-4');
+    const result = document.getElementById('quiz-result');
+    const options = currentStep.querySelectorAll('input[type="radio"]');
+
+    let selected = false;
+    options.forEach(option => {
+        if (option.checked) {
+            selected = true;
+        }
+    });
+
+    if (selected) {
+        currentStep.style.display = 'none';
+        result.style.display = 'block';
+    } else {
+        alert('Bitte wählen Sie eine Option.');
+    }
+}
+
 
     </script>
 </body>

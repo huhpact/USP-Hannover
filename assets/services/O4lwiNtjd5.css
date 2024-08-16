@@ -16,7 +16,7 @@ body {
 }
 
 header {
-		background-color: #333333;
+		background-color: black;
 		padding: 20px;
 		padding-top: 40px;
 		display: flex;
@@ -43,8 +43,6 @@ header nav a:hover {
 
 .logo img {
 		height: 100px;
-		background-color: white;
-		border-radius: 4px;
 }
 
 section {
@@ -210,7 +208,7 @@ h2 {
 }
 
 footer {
-		background-color: #333333;
+		background-color: black;
 		color: #FED16E;
 		text-align: center;
 		padding: 20px;

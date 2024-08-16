@@ -15,7 +15,7 @@ body {
 }
 
 header {
-		background-color: #333333;
+		background-color: black;
 		padding: 20px;
 		display: flex;
 		justify-content: flex-start;
@@ -75,7 +75,7 @@ section h1 {
 }
 
 footer {
-		background-color: #333333;
+		background-color: black;
 		color: #FED16E;
 		text-align: center;
 		padding: 20px;

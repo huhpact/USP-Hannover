@@ -243,3 +243,321 @@ hr {
 	opacity: 1;
 	transform: translateY(0);
 }
+
+.contact-info {
+	display: flex;
+	justify-content: space-around;
+	align-items: flex-start;
+	flex-wrap: wrap;
+	text-align: center;
+	margin-bottom: 40px;
+}
+
+.contact-person {
+	width: 100%;
+	max-width: 400px;
+	padding: 10px;
+}
+
+.contact-person img {
+	height: 120px;
+width: 120px;
+border-radius: 50%;
+object-fit: cover;
+margin: 0 auto;
+display: block;
+box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.divider {
+	border-left: 2px solid #71835F;
+	height: 100px;
+	align-self: center;
+	margin: 0 20px;
+}
+
+.contact-general {
+	text-align: center;
+	font-size: 16px;
+}
+
+.contact-general p {
+	font-size: 14px;
+	margin: 10px 0;
+}
+
+
+.contact-person h3 {
+	margin-top: 10px;
+	font-size: 22px;
+	}
+	
+	.contact-person p {
+	margin-top: 5px;
+	font-size: 16px;
+	}
+	
+	@media (max-width: 767px) {
+	header nav {
+	display: none;
+	}
+
+	header .menu-toggle {
+			display: block;
+			color: #FED16E;
+			font-size: 24px;
+			cursor: pointer;
+	}
+	
+	header nav.active {
+			display: flex;
+			flex-direction: column;
+			position: absolute;
+			top: 100%;
+			left: 0;
+			width: 100%;
+			background-color: #333333;
+	}
+	
+	header nav a {
+			padding: 15px;
+			font-size: 20px;
+			border-bottom: 1px solid #FED16E;
+	}
+	
+	section {
+			padding: 40px 10px;
+	}
+	
+	.about-item,
+	.contact-person {
+			flex: 1 1 100%;
+			max-width: 100%;
+	}
+	
+	h1 {
+			font-size: 24px;
+	}
+	
+	h2 {
+			font-size: 20px;
+	}
+	
+	p,
+	span {
+			font-size: 16px;
+			margin: 0 10%;
+	}
+	
+	ul {
+			font-size: 16px;
+			margin: 20px 10%;
+	}
+
+}
+
+@media (min-width: 768px) {
+.button-52 {
+padding: 13px 50px 13px;
+}
+}
+
+@media (max-width: 767px) {
+	.divider {
+			display: none;
+	}
+}
+.service-list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: 0 10%;
+}
+
+.service-item {
+	flex: 1 1 45%;
+	max-width: 45%;
+	background-color: #fff;
+	margin: 20px;
+	padding: 20px;
+	border-radius: 8px;
+	box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+	text-align: left;
+}
+
+.service-item h2 {
+	margin-bottom: 10px;
+	font-size: 22px;
+}
+
+.service-item p {
+	font-size: 18px;
+}
+
+@media (max-width: 767px) {
+	.service-item {
+			flex: 1 1 100%;
+			max-width: 100%;
+	}
+}
+.contact-general {
+	text-align: center;
+	font-size: 26px;
+}
+
+.contact-general p {
+	font-size: 16px;
+	margin: 10px 0;
+}
+
+.contact-general a {
+	color: #000;
+	text-decoration: none;
+}
+
+.contact-general a:hover {
+	text-decoration: underline;
+}
+
+h2 {
+font-size: 18px;
+}
+
+h3 {
+font-size: 16px;
+}
+
+p, span, ul {
+font-size: 16px;
+}
+
+.button-52 {
+font-size: 14px;
+padding: 10px 20px;
+}
+
+.nav-links a {
+font-size: 16px;
+}
+
+.credit {
+	font-family: "Roboto Mono", monospace;
+	font-size: 13px;
+	color: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.credit a {
+	display: flex;
+	align-items: center;
+}
+
+.img-credit {
+	height: 20px;
+	margin-left: 5px;
+}
+
+.logo img {
+	height: 100px;
+}
+
+@media (max-width: 768px) {
+.logo img {
+height: 60px;
+}
+}
+
+footer {
+	background-color: black;
+	color: #FED16E;
+	text-align: center;
+	padding: 20px;
+	font-size: 12px;
+}
+
+
+footer .icons {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 20px;
+}
+
+footer .icons a {
+	color: #FED16E;
+	text-decoration: none;
+	margin: 0 15px;
+	font-size: 16px;
+	transition: color 0.3s, font-size 0.3s;
+}
+
+footer .icons a:hover {
+	color: #fff;
+	font-size: 16px;
+}
+
+.scroll-element {
+	opacity: 0;
+	transform: translateY(20px);
+	transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.scroll-element.in-view {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+h1 {
+font-size: 22px;
+color: var(--headcolor);
+text-align: center;
+}
+
+.check-list ul {
+	list-style-type: disc;
+	padding-left: 20px;
+	text-align: left;
+	display: inline-block;
+	margin: 20px 15%;
+	font-size: 18px;
+	list-style: none;
+}
+
+.check-list ul li {
+	position: relative;
+	padding-left: 30px; 
+	margin-bottom: 10px; 
+}
+
+.check-list ul li::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 16px; 
+	height: 16px; 
+	background-image: url('/assets/index/checkmark.png');
+	background-size: contain; 
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+@media (max-width: 767px) {
+	.check-list ul {
+			margin: 20px 10%;
+	}
+
+	.check-list ul li {
+			margin-bottom: 10px;
+	}
+
+	.check-list ul li::before {
+			width: 12px;
+			height: 12px;
+	}
+
+	
+}

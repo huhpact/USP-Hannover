@@ -105,19 +105,19 @@ h3 {
 }
 
 h1 {
-    font-size: 28px;
+    font-size: 24px;
     margin-bottom: 30px;
 }
 
 h2 {
-    font-size: 24px;
+    font-size: 20px;
     margin-bottom: 20px;
 }
 
 p,
 span {
     font-family: 'Anek Devanagari', sans-serif;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 1.6;
     margin: 0 15%;
 }
@@ -376,6 +376,10 @@ box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rg
     ul {
         font-size: 16px;
         margin: 20px 10%;
+    }
+
+    li {
+        font-size: 16px;
     }
 
 }

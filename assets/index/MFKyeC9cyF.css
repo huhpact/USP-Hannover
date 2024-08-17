@@ -755,4 +755,6 @@ section h1, h2 {
     text-align: center;
   }
 
-  
+  .left-list {
+    text-align: left;
+  }

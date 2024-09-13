@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>USP Hannover - Sparring</title>
+    <link href='https://fonts.googleapis.com/css?family=Avenir Next LT Pro|Roboto+Mono&display=swap' rel='stylesheet'>
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="shortcut icon" href="/assets/sparring/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="/assets/sparring/bDf1K3kPGD.css">
+   
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="/index.html"><img src="/assets/index/logo.png" alt="USP Hannover Logo"></a>
+        </div>
+    </header>
+
+    <main>
+        <section id="sparring">
+            <h2>Was ist eigentlich „Sparring?“</h2>
+            <div class="image-container">
+                <img class="scroll-element" src="/assets/sparring/7.jpeg" alt="Sparring Image">
+            </div>
+            <p><strong>USP Hannover</strong> ist Ihr Partner für erfolgreiche Familienunternehmen in den spannenden und herausfordernden Zeiten der Digitalisierung, Künstlichen Intelligenz, des Fachkräftemangels und der Nachhaltigkeit.</p>
+            <p>Als Unternehmer wissen Sie, dass eine ausgewogene Unternehmensstrategie ebenso wichtig ist wie Ihre persönliche Performance und Balance.</p>
+            <p>Seit 25 Jahren unterstützen wir Inhaber von Familienunternehmen deutschlandweit dabei, ihre unternehmerische Verantwortung wahrzunehmen und den langfristigen Erfolg ihres Unternehmens zu sichern.</p>
+            <p>Wir helfen Ihnen, die anspruchsvolle Rolle als Inhaber mit den richtigen Strategien und unserer langjährigen Erfahrung zu meistern – immer mit Blick auf Sie als Mensch.</p>
+            <p>Unsere Analyse umfasst alle Unternehmensbereiche und Ihr persönliches Lebensrad.</p>
+            <p>Unsere Netzwerkpartner aus Medizin, Coaching und Therapie begleiten Sie bei Bedarf, um Ihre Gesundheit und Leistungsfähigkeit langfristig zu erhalten.</p>
+            <a href="contact.html" class="btn-primary">Kontaktieren Sie uns</a>
+        </section>
+
+        <hr>
+        <div class="icon-row">
+            <i class='bx bx-user scroll-element'></i>
+            <i class='bx bx-briefcase scroll-element'></i>
+            <i class='bx bx-heart scroll-element'></i>
+        </div>
+    </main>
+
+    <footer>
+        <p class="copy">&copy; 2024 USP Hannover. Alle Rechte vorbehalten.</p>
+        <div class="icons">
+            <a href="/de/impressum.html"><i class='bx bxs-file'></i> Impressum</a>
+            <a href="/de/privacy.html"><i class='bx bxs-lock-alt'></i> Datenschutzerklärung</a>
+        </div><br>
+        <p class="credit">Réalisé par 
+            <a href="https://huhpact.dev">
+                <img class="img-credit" src="/assets/sparring/logo-huhpact.png" alt="huh(pact)">
+            </a>
+        </p>
+    </footer>
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const scrollElements = document.querySelectorAll('.scroll-element');
+
+    const elementInView = (el, percentageScroll = 100) => {
+        const elementTop = el.getBoundingClientRect().top;
+
+        return (
+            elementTop <= 
+            ((window.innerHeight || document.documentElement.clientHeight) * (percentageScroll / 100))
+        );
+    };
+
+    const displayScrollElement = (element) => {
+        element.classList.add('in-view');
+    };
+
+    const hideScrollElement = (element) => {
+        element.classList.remove('in-view');
+    };
+
+    const handleScrollAnimation = () => {
+        scrollElements.forEach((el) => {
+            if (elementInView(el, 100)) {
+                displayScrollElement(el);
+            } else {
+                hideScrollElement(el);
+            }
+        });
+    };
+
+    window.addEventListener('scroll', () => {
+        handleScrollAnimation();
+    });
+
+    handleScrollAnimation();
+});
+
+    </script>
+</body>
+</html>

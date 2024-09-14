@@ -888,3 +888,7 @@ p, h1, h2, h3, ul, ol, li {
 .bg2 {
     background-color: #fffcf5;
 }
+
+.want-list {
+    padding-left: 10%;
+}

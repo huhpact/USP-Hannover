@@ -238,7 +238,7 @@ footer .icons a:hover {
 
 hr {
 		border: 1px solid black;
-		width: 80%;
+		width: 90%;
 		margin: 60px auto;
 }
 
@@ -289,4 +289,20 @@ height: 60px;
 .scroll-element.in-view {
 	opacity: 1;
 	transform: translateY(0);
+}
+
+@media (min-width: 1024px) {
+	.services {
+			display: flex;
+			flex-wrap: nowrap; 
+			justify-content: space-around; 
+			gap: 20px; 
+			width: 90%;
+			margin: 60px auto;
+	}
+
+	.service-box {
+			flex: 1; 
+			max-width: 300px; 
+	}
 }

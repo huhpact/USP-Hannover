@@ -432,7 +432,7 @@ height: 60px;
 position: relative;
 width: 100%;
 height: 100vh;
-background: url('/assets/index/Balance.jpg') no-repeat center center/cover;
+background: url('/assets/index/bg-big1.png') no-repeat center center/cover;
 display: flex;
 justify-content: center;
 align-items: center;
@@ -445,7 +445,7 @@ overflow-x: hidden;
 font-size: 2.5rem;
 margin-bottom: 20px;
 background-color: #FED16E;
-transform: translateX(-300px);
+transform: translate(-320px, -20px);
 }
 
 .fullscreen-section {
@@ -474,15 +474,14 @@ font-size: 1.2rem;
 margin-bottom: 10px;
 padding: 0 10px; 
 word-wrap: break-word; 
-transform: translateX(-50px);
-;
+transform: translate(-70px, -10px);
 }
 
 .fullscreen-section .typed-text {
 font-size: 1rem; 
 padding: 0 10px;
 word-wrap: break-word; 
-transform: translateX(-50px);
+transform: translate(-70px, -10px);
 }
 
 .fullscreen-section .typed-text::before {
@@ -509,14 +508,14 @@ font-size: 1.8rem;
 margin-bottom: 10px;
 padding: 0 20px; 
 word-wrap: break-word; 
-transform: translateX(-200px);
+transform: translate(-220px, -15px);
 }
 
 .fullscreen-section .typed-text {
 font-size: 1.2rem; 
 padding: 0 20px; 
 word-wrap: break-word; 
-transform: translateX(-200px);
+transform: translate(-220px, -15px);
 }
 
 .fullscreen-section .typed-text::before {
@@ -533,7 +532,7 @@ width: auto;
     font-weight: bold;
     color: black;
     font-size: 24px;
-    transform: translateX(-300px);
+    transform: translate(-320px, -20px);
 }
 
 .typed-text::before {

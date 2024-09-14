@@ -755,7 +755,7 @@ section h1, h2 {
 
   .left-list {
     text-align: left;
-    list-style: none;
+    list-style: square;
     
   } 
 

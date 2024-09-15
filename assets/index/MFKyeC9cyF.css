@@ -737,6 +737,9 @@ section h1, h2 {
  .shadow {
     overflow: hidden;
     height: 20px;
+    background-color: transparent;
+    margin-bottom: 0;
+    padding-bottom: 0;
   }
   
 .shadow:after {

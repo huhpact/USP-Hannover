@@ -68,18 +68,18 @@ section p {
 h1,
 h2,
 h3 {
-		color: black;
+		color: var(--headcolor);
 		font-weight: bold;
 		text-align: center;
 }
 
 h1 {
-		font-size: 24px;
+		font-size: 27px;
 		margin-bottom: 30px;
 }
 
 h2 {
-		font-size: 20px;
+		font-size: 23px;
 		margin-bottom: 20px;
 }
 

@@ -155,7 +155,7 @@ p {
     display: inline-block;
     margin: 20px 15%;
     font-size: 18px;
-    list-style: circle;
+    
 }
 
 .arrow-list li::marker {
@@ -813,9 +813,10 @@ p, h1, h2, h3, ul, ol, li {
 .section {
     display: flex;
     align-items: center;
-    margin-bottom: 0;
     margin: 0;
     width: 100%;
+    padding-bottom: 0;
+    margin-bottom: 0;
 }
 
 .image-container {
@@ -836,9 +837,17 @@ p, h1, h2, h3, ul, ol, li {
     top: 0;
     height: 100%;
     width: 60px;
-    background: linear-gradient(to bottom, #fff 50%, transparent 50%);
-    background-size: 100% 50px;
     z-index: 1;
+}
+
+.wave-border::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+  
 }
 
 .text-container {
@@ -859,6 +868,7 @@ p, h1, h2, h3, ul, ol, li {
     font-size: 1.2rem;
     color: #555;
 }
+
 
 #angebot p {
     text-align: center;
@@ -959,4 +969,11 @@ input:focus, textarea:focus {
 
 .text-bottom-form a {
     color: red;
+}
+
+.white-bg-section {
+    background-color: #fff;
+    margin-top: 0;
+    padding-top: 19px;
+    
 }

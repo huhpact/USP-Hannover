@@ -425,7 +425,7 @@ document.addEventListener("DOMContentLoaded", function() {
   const acceptButton = document.getElementById('accept-cookies');
   const declineButton = document.getElementById('decline-cookies');
 
-  // Funktion um Cookies zu lesen
+  
   function getCookie(name) {
     let cookieArr = document.cookie.split(";");
     for (let i = 0; i < cookieArr.length; i++) {
@@ -437,7 +437,7 @@ document.addEventListener("DOMContentLoaded", function() {
     return null;
   }
 
-  // Überprüfen, ob der Benutzer bereits eine Auswahl getroffen hat
+  
   if (!getCookie("cookieAccepted")) {
     setTimeout(() => {
       cookieBanner.classList.add('show');
@@ -457,7 +457,7 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
-// Scroll-to-top Button
+
 document.getElementById("backToTop").addEventListener("click", function() {
   window.scrollTo({
     top: 0,
@@ -465,7 +465,7 @@ document.getElementById("backToTop").addEventListener("click", function() {
   });
 });
 
-// Zeige den Button bei Scrollen an
+
 window.addEventListener("scroll", function() {
   let backToTopButton = document.getElementById("backToTop");
   if (window.scrollY > 300) {

@@ -1,0 +1,104 @@
+<!DOCTYPE html><html lang="de"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>USP Hannover - Impressum</title><link href='https://fonts.googleapis.com/css?family=Avenir Next LT Pro' rel='stylesheet'><link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'><link rel="icon" href="/assets/imprint/logo.png" type="image/x-icon"><link rel="stylesheet" href="/assets/imprint/UdS3tfCQyW.css"></head>
+
+<body>
+  <div id="cookie-banner"><div class="cookie-content"><h3>Wir verwenden Cookies!</h3><p>Wir verwenden Cookies, um Ihre Erfahrung auf unserer Website zu verbessern. Einige Cookies sind erforderlich, um die grundlegenden Funktionen zu gewährleisten, während andere uns helfen, die Nutzung unserer Seite zu analysieren und Ihnen personalisierte Inhalte sowie relevante Werbung anzuzeigen. Sie können alle Cookies akzeptieren oder ablehnen. Wenn Sie auf „Ablehnen“ klicken, werden nur die erforderlichen Cookies aktiviert. Weitere Informationen und Anpassungsmöglichkeiten finden Sie in unserer <a href="/de/privacy.html" class="privacy-anchor">Datenschutzerklärung</a>.</p><div class="cookie-buttons"><button id="accept-cookies" class="cookie-btn accept">Akzeptieren</button><button id="decline-cookies" class="cookie-btn decline">Ablehnen</button></div></div></div>
+
+<div id="backToTop"><i class='bx bx-chevron-up'></i></div>
+    <header>
+        <div class="logo">
+            <a href="/index.html"><img src="/assets/index/logo.png" alt="Logo"></a>
+        </div>
+    </header>
+
+    <section>
+        <h1>Impressum</h1>
+        <div class="contact-general">
+            <p><i class='bx bxs-business'></i> USP Hannover GmbH</p>
+            <p><i class='bx bxs-map'></i> <a href="https://maps.app.goo.gl/pcBD8bRFzJTAP3px7" target="_blank">Gretchenstr. 40<br>30161 Hannover</a></p>
+            <p><i class='bx bxs-envelope'></i> <a href="mailto:c.klingebiel@usp-hannover.de">c.klingebiel@usp-hannover.de</a></p>
+            <p><i class='bx bxs-globe'></i> <a href="http://www.usp-hannover.de" target="_blank">www.usp-hannover.de</a></p>
+            <p><i class='bx bxs-building-house'></i> Amtsgericht Hannover HRB 227222</p>
+            <p><i class='bx bx-tax'></i> Steuer-Nr. 25/210/00218</p>
+        </div>
+    </section>
+
+    <footer>
+        <p class="copy" style="color: white;">&copy; 2024 USP Hannover. Alle Rechte vorbehalten.</p>
+        <div class="icons">
+            <a href="/de/impressum.html"><i class='bx bxs-file'></i> Impressum</a>
+            <a href="/de/privacy.html"><i class='bx bxs-lock-alt'></i> Datenschutzerklärung</a>
+        </div><br>
+        <p class="credit">Réalisé par 
+            <a href="https://huhpact.dev">
+                <img class="img-credit"  src="/assets/imprint/logo-huhpact.png" alt="huh(pact)"></a></p>
+    </footer>
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+  const cookieBanner = document.getElementById('cookie-banner');
+  const acceptButton = document.getElementById('accept-cookies');
+  const declineButton = document.getElementById('decline-cookies');
+
+  
+  function getCookie(name) {
+    let cookieArr = document.cookie.split(";");
+    for (let i = 0; i < cookieArr.length; i++) {
+      let cookiePair = cookieArr[i].split("=");
+      if (name === cookiePair[0].trim()) {
+        return decodeURIComponent(cookiePair[1]);
+      }
+    }
+    return null;
+  }
+
+  
+  if (!getCookie("cookieAccepted")) {
+    setTimeout(() => {
+      cookieBanner.classList.add('show');
+    }, 500);
+  }
+
+  acceptButton.addEventListener('click', function() {
+    cookieBanner.classList.remove('show');
+    
+    document.cookie = "cookieAccepted=true; max-age=31536000; path=/";
+  });
+
+  declineButton.addEventListener('click', function() {
+    cookieBanner.classList.remove('show');
+    
+    document.cookie = "cookieAccepted=false; max-age=31536000; path=/";
+  });
+});
+
+
+document.getElementById("backToTop").addEventListener("click", function() {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+});
+
+
+window.addEventListener("scroll", function() {
+  let backToTopButton = document.getElementById("backToTop");
+  if (window.scrollY > 300) {
+    backToTopButton.classList.add("show");
+  } else {
+    backToTopButton.classList.remove("show");
+  }
+});
+
+    </script>
+</body>
+
+</html>

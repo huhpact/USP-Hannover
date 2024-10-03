@@ -885,6 +885,7 @@ p, h1, h2, h3, ul, ol, li {
 
 #usp {
     background-color: #fffcf5;
+    padding: 0;
 }
 
 .bg {
@@ -893,6 +894,7 @@ p, h1, h2, h3, ul, ol, li {
 
 #home {
     background-color: #f6fbf0;
+    padding: 0;
 }
 
 #ueber-uns {
@@ -900,7 +902,7 @@ p, h1, h2, h3, ul, ol, li {
 }
 
 #kontakt {
-    background-color: #f6fbf1;
+    background-color: #f6fbf0;
 }
 
 .bg2 {
@@ -1094,4 +1096,43 @@ header, section {
         padding-left: 15px;
         padding-right: 15px;
     }
+}
+
+.split-1 {
+    background-color: #fffcf5;
+    padding: 0;
+}
+
+.split-2 {
+    background-color: #f6fbf0;
+    padding: 0;
+}
+
+#backToTop {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px; 
+    height: 60px;
+    background-color: #FED16E;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    opacity: 0;
+    transform: translateY(100px);
+    z-index: 1000;
+}
+
+#backToTop i {
+    font-size: 32px; 
+    color: white;
+}
+
+#backToTop.show {
+    opacity: 1;
+    transform: translateY(0);
 }

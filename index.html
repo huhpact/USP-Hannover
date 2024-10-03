@@ -65,7 +65,7 @@
 
             <img src="/assets/index/main.jpeg" class="section-image scroll-element">
             <h1>Kennen Sie das auch?</h1>
-            <div class="arrow-list">
+            <div class="edgy-list text-align-left responive-list">
             <ul>
                 <li class="scroll-element">Sie merken, dass Ihr Unternehmen nicht mehr auf dem richtigen „Kurs“ ist?</li>
                 <li class="scroll-element">Sie haben keine Ideen, Ihre Produkte und Dienstleistungen weiterzuentwickeln?</li>
@@ -104,7 +104,7 @@
             </section>
             <section class="white-bg-section">
             <h1 style="color: var(--headcolor)">Sie wollen doch: </h1>
-            <div  class="arrow-list want-list">
+            <div  class="edgy-list want-list text-align-left">
             <ul>
                 <li class="scroll-element">Ihr Unternehmen erfolgreicher machen und sich von Ihren Wettbewerbern abheben?</li>
                 <li class="scroll-element">mehr Zeit für die unternehmerischen und strategischen Führungsaufgaben und Ihr Privatleben gewinnen?</li>
@@ -129,7 +129,7 @@
             <a href="/de/leistungen.html" class="button-52">Unsere Leistungen</a>
         </section>
 
-        <section id="ueber-uns" class="snap-item">
+        <section id="ueber-uns" class="snap-item"><br>
             <h1>Über uns</h1>
             <div class="about-container">
                 <div class="about-item">
@@ -181,7 +181,7 @@
         </div>
         </section>
 
-        <section id="kontakt" class="snap-item">
+        <section id="kontakt" class="snap-item"><br>
             <h1 style="color:black;">Schreiben Sie uns!</h1>
             <h1>Wie dürfen wir Ihnen helfen?</h1>
             <div class="p-center">
@@ -213,6 +213,20 @@
             -->
         </section>
         </div>
+
+        <div id="cookie-banner">
+            <div class="cookie-content">
+              <h3>Wir verwenden Cookies!</h3>
+              <p>
+                Wir verwenden Cookies, um Ihre Erfahrung auf unserer Website zu verbessern. Einige Cookies sind erforderlich, um die grundlegenden Funktionen zu gewährleisten, während andere uns helfen, die Nutzung unserer Seite zu analysieren und Ihnen personalisierte Inhalte sowie relevante Werbung anzuzeigen. Sie können alle Cookies akzeptieren oder ablehnen. Wenn Sie auf „Ablehnen“ klicken, werden nur die erforderlichen Cookies aktiviert. Weitere Informationen und Anpassungsmöglichkeiten finden Sie in unserer <a href="/de/privacy.html" class="privacy-anchor">Datenschutzerklärung</a>.
+              </p>
+              <div class="cookie-buttons">
+                <button id="accept-cookies" class="cookie-btn accept">Akzeptieren</button>
+                <button id="decline-cookies" class="cookie-btn decline">Ablehnen</button>
+              </div>
+            </div>
+          </div>
+          
         
     </main>
 
@@ -425,6 +439,30 @@ document.addEventListener('DOMContentLoaded', function() {
   
     handleScrollAnimation();
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+  const cookieBanner = document.getElementById('cookie-banner');
+  const acceptButton = document.getElementById('accept-cookies');
+  const declineButton = document.getElementById('decline-cookies');
+
+  
+  setTimeout(() => {
+    cookieBanner.classList.add('show');
+  }, 500);
+
+  acceptButton.addEventListener('click', function() {
+    cookieBanner.classList.remove('show');
+    
+    document.cookie = "cookieAccepted=true; max-age=31536000; path=/";
+  });
+
+  declineButton.addEventListener('click', function() {
+    cookieBanner.classList.remove('show');
+    
+    document.cookie = "cookieAccepted=false; max-age=31536000; path=/";
+  });
+});
+
 
 
     </script>

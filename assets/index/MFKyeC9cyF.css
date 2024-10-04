@@ -821,6 +821,7 @@ p, h1, h2, h3, ul, ol, li {
     width: 100%;
     padding-bottom: 0;
     margin-bottom: 0;
+    flex-direction: row; 
 }
 
 .image-container {
@@ -851,7 +852,6 @@ p, h1, h2, h3, ul, ol, li {
     right: 0;
     height: 100%;
     width: 100%;
-  
 }
 
 .text-container {
@@ -872,6 +872,38 @@ p, h1, h2, h3, ul, ol, li {
     font-size: 1.2rem;
     color: #555;
 }
+
+
+@media (max-width: 768px) {
+    .section {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .image-container, .text-container {
+        flex: none; 
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .image-container img {
+        height: auto; 
+    }
+
+    .text-container {
+        padding: 10px;
+    }
+
+    .text-container h1 {
+        font-size: 1.5rem; 
+    }
+
+    .text-container p {
+        font-size: 1rem;
+        text-align: center;
+    }
+}
+
 
 
 #angebot p {

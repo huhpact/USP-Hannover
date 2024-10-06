@@ -542,7 +542,7 @@ text-align: center;
 	transform: translateY(-50%);
 	width: 16px; 
 	height: 16px; 
-	background-image: url('/assets/index/checkmark.png');
+	background-image: url('checkmark.png');
 	background-size: contain; 
 	background-repeat: no-repeat;
 	background-position: center;

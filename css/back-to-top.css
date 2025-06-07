@@ -1,0 +1,68 @@
+:root {
+  --color-primary: #71835F;
+  --color-primary-light: #899e75;
+  --color-primary-dark: #5a694c;
+  --color-accent: #FED16E;
+  --color-accent-light: #fee59b;
+  --color-accent-dark: #e9b43d;
+  --color-bg: #f7f9f4;
+  --color-bg-alt: #ffffff;
+  --color-text: #333333;
+  --color-text-light: #666666;
+  --color-text-dark: #222222;
+  --color-border: rgba(0, 0, 0, 0.1);
+  
+  --font-primary: 'Avenir', sans-serif;
+  --font-secondary: 'Avenir', sans-serif;
+  
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.15);
+  
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.5s ease;
+  
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 4rem;
+  
+  --container-width: 1200px;
+  --header-height: 80px;
+}
+
+.back__to__top {
+  position: fixed;
+  bottom: -60px;
+  right: var(--spacing-lg);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-md);
+  z-index: 30;
+  transition: bottom var(--transition-normal), background-color var(--transition-normal);
+  cursor: pointer;
+}
+
+.back__to__top.show {
+  bottom: var(--spacing-lg);
+}
+
+.back__to__top:hover {
+  background-color: var(--color-primary-dark);
+}
+
+.back__to__top i {
+  font-size: 1.5rem;
+}

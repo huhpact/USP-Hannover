@@ -1,0 +1,239 @@
+:root {
+	--primary: #71835f;
+	--secondary: #FED16E;
+	--dark: #32373C;
+	--light: #f9f9f9;
+	--accent: #E94E77;
+	--gray-100: #f3f4f6;
+	--gray-200: #e5e7eb;
+	--gray-300: #d1d5db;
+	--gray-800: #1f2937;
+	--shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+	--shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+	--shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+	--shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: 'Avenir', sans-serif;
+	line-height: 1.5;
+	color: var(--dark);
+	background-color: var(--light);
+	overflow-x: hidden;
+}
+
+.container {
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 1.5rem;
+}
+
+.section__title {
+	font-size: 3.5rem;
+	font-weight: 700;
+	color: var(--primary);
+	text-align: center;
+	margin-bottom: 4rem;
+	letter-spacing: -0.025em;
+	overflow: hidden;
+}
+
+.title__line {
+	display: block;
+	transform: translateY(100%);
+	animation: revealTitle 1s cubic-bezier(0.76, 0, 0.24, 1) forwards;
+}
+
+.title__line:nth-child(2) {
+	animation-delay: 0.2s;
+}
+
+@keyframes revealTitle {
+	100% {
+			transform: translateY(0);
+	}
+}
+
+.team__grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+	gap: 3rem;
+	margin-bottom: 6rem;
+}
+
+.team__member {
+	position: relative;
+	background: white;
+	border-radius: 1rem;
+	overflow: hidden;
+	box-shadow: var(--shadow-md);
+	transition: transform 0.6s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.member__image__wrapper {
+	position: relative;
+	overflow: hidden;
+}
+
+.member__image {
+	width: 100%;
+	height: 300px;
+	overflow: hidden;
+}
+
+.member__image img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: transform 0.6s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.member__overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(113, 131, 95, 0.9);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	opacity: 0;
+	transform: translateY(20px);
+	transition: all 0.6s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.member__quote {
+	color: white;
+	font-size: 1.5rem;
+	font-weight: 600;
+	text-align: center;
+	padding: 2rem;
+	transform: translateY(20px);
+	opacity: 0;
+	transition: all 0.6s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.team__member:hover {
+	transform: translateY(-10px);
+}
+
+.team__member:hover .member__image img {
+	transform: scale(1.1);
+}
+
+.team__member:hover .member__overlay {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+.team__member:hover .member__quote {
+	transform: translateY(0);
+	opacity: 1;
+	transition-delay: 0.1s;
+}
+
+.member__info {
+	padding: 1.5rem;
+	background: white;
+}
+
+.member__info h3 {
+	font-size: 1.25rem;
+	font-weight: 600;
+	color: var(--primary);
+	margin-bottom: 0.5rem;
+}
+
+.member__title {
+	color: var(--gray-800);
+	font-size: 1rem;
+}
+
+.content__grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 2rem;
+}
+
+.content__card {
+	position: relative;
+	background: white;
+	padding: 2rem;
+	border-radius: 1rem;
+	box-shadow: var(--shadow);
+	overflow: hidden;
+}
+
+.card__number {
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+	font-size: 3rem;
+	font-weight: 700;
+	color: var(--primary);
+	opacity: 0.1;
+}
+
+.card__content {
+	position: relative;
+	z-index: 1;
+}
+
+.reveal__card {
+	opacity: 0;
+	transform: translateY(50px);
+	transition: all 0.8s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.reveal__card.visible {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+.content__card p {
+	color: var(--gray-800);
+	line-height: 1.75;
+}
+
+.content__card strong {
+	color: var(--primary);
+	font-weight: 600;
+	position: relative;
+	display: inline-block;
+}
+
+.content__card strong::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	background: var(--primary);
+	transform: scaleX(0);
+	transform-origin: right;
+	transition: transform 0.3s ease;
+}
+
+.content__card:hover strong::after {
+	transform: scaleX(1);
+	transform-origin: left;
+}
+
+@media (max-width: 768px) {
+	.section__title {
+			font-size: 2.5rem;
+	}
+}

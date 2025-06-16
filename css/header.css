@@ -345,7 +345,6 @@ button {
   font-size: 1.5rem;
 }
 
-/* Mobile Responsive Styles */
 @media (max-width: 768px) {
   .main__nav {
     display: none;
@@ -358,8 +357,7 @@ button {
   .mobile__menu {
     display: block;
   }
-  
-  /* Hide phone number on mobile, keep only icon */
+
   .phone__number {
     display: none;
   }
@@ -370,7 +368,6 @@ button {
     justify-content: center;
   }
   
-  /* Logo text behavior on mobile - still only appears when scrolled */
   .logo__text {
     font-size: 1.4rem;
   }
@@ -398,12 +395,10 @@ button {
   }
 }
 
-/* Prevent body scroll when mobile menu is open */
 body.menu__open {
   overflow: hidden;
 }
 
-/* Additional responsive adjustments */
 @media (max-width: 1024px) and (min-width: 769px) {
   .nav__list {
     gap: var(--spacing-md);

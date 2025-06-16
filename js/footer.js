@@ -8,26 +8,15 @@ document.addEventListener("DOMContentLoaded", function() {
                     <ul>
                         <li><a href="index.html">Unternehmen</a></li>
                         <li><a href="about.html">Team</a></li>
-                        <li><a href="careers.html">Karriere</a></li>
-                        <li><a href="news.html">Aktuelles</a></li>
-                    </ul>
-                </div>
-                <div class="footer__section">
-                    <h3>Leistungen</h3>
-                    <ul>
-                        <li><a href="services/digitalization.html">Digitalisierung</a></li>
-                        <li><a href="services/consulting.html">Unternehmensberatung</a></li>
-                        <li><a href="services/hr.html">Personalwesen</a></li>
-                        <li><a href="services/innovation.html">Innovation</a></li>
+                        <li><a href="contact.html">Kontakt</a></li>
                     </ul>
                 </div>
                 <div class="footer__section">
                     <h3>Ressourcen</h3>
                     <ul>
                         <li><a href="blog.html">Blog</a></li>
-                        <li><a href="case-studies.html">Fallstudien</a></li>
-                        <li><a href="whitepaper.html">Whitepaper</a></li>
-                        <li><a href="events.html">Veranstaltungen</a></li>
+                        <li><a href="index.html#usp">USP</a></li>
+                        <li><a href="services.html">Dienstleistungen</a></li>
                     </ul>
                 </div>
                 <div class="footer__section">
@@ -35,8 +24,15 @@ document.addEventListener("DOMContentLoaded", function() {
                     <ul>
                         <li><a href="privacy.html">Datenschutz</a></li>
                         <li><a href="impressum.html">Impressum</a></li>
-                        <li><a href="terms.html">AGB</a></li>
                         <li><a href="cookies.html">Cookie-Richtlinie</a></li>
+                    </ul>
+                </div>
+                <div class="footer__section">
+                    <h3>Kontaktdetails</h3>
+                    <ul>
+                        <li><a href="tel:051138820364">Telefonnummer</a></li>
+                        <li><a href="mailto:info@usp-hannover.de">E-Mail</a></li>
+                        <li><a href="https://maps.app.goo.gl/GUmaispUuEY9H1nw6" target="_blank">Firmenstandort</a></li>
                     </ul>
                 </div>
             </div>

@@ -501,10 +501,6 @@ p {
   .phone__number {
     display: none;
   }
-
-  .phone__link i {
-    display: none;
-  }
   
   .phone__link {
     padding: var(--spacing-xs);

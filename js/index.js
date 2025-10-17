@@ -1,13 +1,15 @@
 document.addEventListener("DOMContentLoaded", function() {
   const pageLoader = document.getElementById('page__loader');
   
-  window.addEventListener('load', function() {
-    setTimeout(function() {
-      pageLoader.classList.add('hide');
-
-      initAnimations();
-    }, 800);
-  });
+  initAnimations();
+  
+  if (pageLoader) {
+    window.addEventListener('load', function() {
+      setTimeout(function() {
+        pageLoader.classList.add('hide');
+      }, 800);
+    });
+  }
   
   const header = document.querySelector('.main__header');
   

@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 </div>
             </div>
             <div class="footer__bottom">
-                <p class="copy">&copy; 2025 USP Hannover GmbH. Alle Rechte vorbehalten.</p>
+                <p class="copy">&copy; 2026 USP Hannover GmbH. Alle Rechte vorbehalten.</p>
                 <p class="credit">Réalisé par 
                     <a href="https://huhpact.dev?utm_source=usphnvr&utm_medium=webbrowser&utm_campaign=usp">
                         <img class="img__credit" src="https://huhpact.dev/s/logo-huhpact.png" alt="huh(pact)">
